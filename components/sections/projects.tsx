@@ -4,8 +4,11 @@ import { FaGithub } from "react-icons/fa";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
 import { projects } from "@/data/projects";
+import { getLatestRepositories } from "@/lib/github";
 
-export function Projects() {
+export async function Projects() {
+  const latestRepositories = await getLatestRepositories("salesmayn-code");
+
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
       <SectionHeading
@@ -14,7 +17,12 @@ export function Projects() {
       />
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
-          <AnimatedWrapper key={project.id} delay={index * 0.08}>
+          <AnimatedWrapper
+            key={project.id}
+            delay={index * 0.08}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.99 }}
+          >
             <article className="border-border group h-full overflow-hidden rounded-xl border">
               <div className="bg-muted relative aspect-[16/8] overflow-hidden">
                 <Image
@@ -68,6 +76,36 @@ export function Projects() {
           </AnimatedWrapper>
         ))}
       </div>
+      {latestRepositories.length > 0 ? (
+        <div className="mt-16">
+          <h3 className="text-xl font-semibold tracking-tight">Latest on GitHub</h3>
+          <p className="text-muted-foreground mt-2">
+            Recently updated public repositories from my GitHub profile.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {latestRepositories.map((repository) => (
+              <a
+                key={repository.id}
+                href={repository.html_url}
+                target="_blank"
+                rel="noreferrer"
+                className="border-border hover:bg-muted rounded-xl border p-5 transition-colors"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <h4 className="font-medium">{repository.name}</h4>
+                  <ExternalLink className="size-4 shrink-0" aria-hidden="true" />
+                </div>
+                <p className="text-muted-foreground mt-3 line-clamp-3 text-sm leading-6">
+                  {repository.description ?? "Public repository on GitHub."}
+                </p>
+                <p className="text-muted-foreground mt-4 text-xs">
+                  {repository.language ?? "Code"} · {repository.stargazers_count} stars
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }
