@@ -1,0 +1,29 @@
+import type { Experience } from "@/types";
+export const experience: Experience[] = [
+  {
+    id: "mimaar-web-engineering-intern",
+    role: "Web Engineering Intern",
+    company: "Mimaar Associates",
+    startDate: "June 2025",
+    endDate: "September 2025",
+    description: [
+      "Architected and deployed React.js and Node.js web solutions, improving platform stability by 20% through modular component design.",
+      "Designed PostgreSQL schemas and Firebase real-time synchronization for a platform serving 150+ concurrent users.",
+      "Built a Jenkins CI/CD pipeline covering linting, testing, Prisma migrations, builds, and deployment.",
+      "Implemented Firebase authentication and validation rules that reduced unauthorized access attempts by 40%.",
+    ],
+  },
+  {
+    id: "inze-marketing-frontend-intern",
+    role: "Front-end Developer Intern",
+    company: "InzeMarketing",
+    location: "Remote",
+    startDate: "June 2024",
+    endDate: "September 2024",
+    description: [
+      "Refactored legacy CSS and JavaScript, raising Google Lighthouse performance by 30% and reducing load time by 1.2 seconds.",
+      "Built responsive interfaces for high-traffic pages, increasing mobile engagement by 45%.",
+      "Integrated Google Analytics and improved SEO metadata for stronger organic visibility.",
+    ],
+  },
+];
