@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the portfolio website for Muhammad Saleh Janjua, built with Next.js, TypeScript, Tailwind CSS, and Vercel Analytics.
 
-## Getting Started
+## Getting started
 
-First, run the development server:
+Install dependencies and run the development server:
 
 ```bash
 npm run dev
@@ -14,9 +14,21 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
+
+Copy `.env.example` to `.env.local` and provide the values before deploying:
+
+- `NEXT_PUBLIC_SITE_URL` — the Vercel production URL or custom domain.
+- `RESEND_API_KEY` — enables contact email delivery.
+- `RESEND_FROM_EMAIL` — a sender address verified in Resend.
+
+Without `RESEND_API_KEY`, the contact endpoint returns a safe `503` response and the UI directs visitors to email directly.
+
+## Deployment
+
+Import this repository into Vercel as a Next.js project, then add the environment variables above in **Project Settings → Environment Variables**. Vercel Analytics activates automatically after deployment.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
