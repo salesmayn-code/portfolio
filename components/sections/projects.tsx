@@ -27,7 +27,7 @@ export async function Projects() {
               <div className="bg-muted relative aspect-[16/8] overflow-hidden">
                 <Image
                   src={project.image}
-                  alt=""
+                  alt={project.title}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />

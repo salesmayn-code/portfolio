@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Pixel Art Canvas",
     description:
       "Interactive browser-based pixel art tool with adjustable grids, layers, palette controls, and real-time drawing.",
-    image: "/projects/pixel-art-canvas.svg",
+    image: "/projects/pixel-art-canvas.jpg",
     techStack: ["JavaScript", "HTML5 Canvas", "CSS3"],
   },
   {
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Agile Capacity Tracker",
     description:
       "Team capacity and sprint dashboard that uses GitHub activity to visualize workload, completion, and velocity.",
-    image: "/projects/agile-capacity-tracker.svg",
+    image: "/projects/agile-capacity-tracker.jpg",
     techStack: ["React", "GitHub API", "JavaScript"],
   },
 ];

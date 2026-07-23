@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
 
@@ -11,11 +12,15 @@ export function About() {
         />
         <AnimatedWrapper>
           <div className="grid items-center gap-10 md:grid-cols-[auto_1fr]">
-            <div
-              className="bg-muted text-muted-foreground flex size-48 shrink-0 items-center justify-center rounded-2xl text-5xl font-semibold tracking-tight"
-              aria-label="Muhammad Saleh Janjua initials"
-            >
-              MSJ
+            <div className="relative size-48 shrink-0 overflow-hidden rounded-2xl">
+              <Image
+                src="/images/profile.jpg"
+                alt="Muhammad Saleh Janjua"
+                fill
+                className="object-cover"
+                sizes="192px"
+                priority
+              />
             </div>
             <div className="text-muted-foreground max-w-3xl space-y-4 leading-8">
               <p>
