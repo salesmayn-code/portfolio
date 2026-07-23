@@ -11,16 +11,19 @@ export function About() {
           subtitle="Engineering applications from interface to infrastructure."
         />
         <AnimatedWrapper>
-          <div className="grid items-center gap-10 md:grid-cols-[auto_1fr]">
-            <div className="relative size-48 shrink-0 overflow-hidden rounded-2xl">
-              <Image
-                src="/images/profile.jpg"
-                alt="Muhammad Saleh Janjua"
-                fill
-                className="object-cover"
-                sizes="192px"
-                priority
-              />
+          <div className="grid items-center gap-12 md:grid-cols-[minmax(0,20rem)_1fr]">
+            <div className="relative mx-auto w-full max-w-xs">
+              <div className="from-primary/30 to-primary/5 absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br blur-xl" />
+              <div className="border-primary/25 shadow-primary/15 relative aspect-[4/5] overflow-hidden rounded-3xl border-2 shadow-2xl">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Muhammad Saleh Janjua"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 320px, 80vw"
+                  priority
+                />
+              </div>
             </div>
             <div className="text-muted-foreground max-w-3xl space-y-4 leading-8">
               <p>

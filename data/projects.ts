@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: "Mimaar Associates CI/CD Pipeline",
     description:
       "End-to-end Jenkins delivery pipeline for a Next.js and TypeScript platform, automating quality gates, Prisma migrations, and zero-downtime deployment.",
-    image: "/projects/mimaar-ci-cd-pipeline.svg",
+    image: "/projects/mimaar-ci-cd-pipeline.png",
     techStack: ["Jenkins", "Next.js", "TypeScript", "Prisma", "PostgreSQL", "PM2"],
     featured: true,
   },
@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: "Cryptojacking Detection Tool",
     description:
       "Final-year project that uses CPU and memory behavior to detect unauthorized crypto-mining, with Python monitoring, REST APIs, alerts, and a React dashboard.",
-    image: "/projects/cryptojacking-detection-tool.svg",
+    image: "/projects/cryptojacking-detection-tool.png",
     techStack: ["Python", "FastAPI", "React", "SQLite", "Machine Learning"],
     featured: true,
   },
