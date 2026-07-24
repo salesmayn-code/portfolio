@@ -9,7 +9,7 @@ export function Hero() {
     >
       <AnimatedWrapper className="max-w-3xl">
         <p className="text-primary text-sm font-medium tracking-[0.2em] uppercase">
-          Full-stack development · DevOps · DevSecOps
+          Full-stack development · DevSecOps · Automation Engineer
         </p>
         <h1 className="mt-5 text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
           Muhammad Saleh Janjua
