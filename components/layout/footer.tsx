@@ -15,6 +15,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
+            className="hover:text-primary transition-colors"
           >
             <FaGithub className="size-5" aria-hidden="true" />
           </a>
@@ -23,10 +24,15 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
+            className="hover:text-primary transition-colors"
           >
             <FaLinkedin className="size-5" aria-hidden="true" />
           </a>
-          <a href={siteConfig.links.email} aria-label="Email Muhammad Saleh Janjua">
+          <a
+            href={siteConfig.links.email}
+            aria-label="Email Muhammad Saleh Janjua"
+            className="hover:text-primary transition-colors"
+          >
             <Mail className="size-5" />
           </a>
         </div>

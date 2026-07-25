@@ -20,7 +20,10 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"
         aria-label="Primary"
       >
-        <a href="#top" className="font-semibold tracking-tight">
+        <a
+          href="#top"
+          className="hover:text-primary font-semibold tracking-tight transition-colors"
+        >
           {siteConfig.name}
         </a>
 
@@ -31,9 +34,9 @@ export function Navbar() {
                 href={item.href}
                 aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
                 className={cn(
-                  "hover:text-foreground text-sm transition-colors",
+                  "hover:text-primary text-sm transition-colors",
                   activeSection === item.href.slice(1)
-                    ? "text-foreground"
+                    ? "text-primary"
                     : "text-muted-foreground",
                 )}
               >
@@ -79,7 +82,7 @@ export function Navbar() {
             key={item.href}
             href={item.href}
             onClick={() => setOpen(false)}
-            className="text-muted-foreground hover:text-foreground py-2 text-sm transition-colors"
+            className="text-muted-foreground hover:text-primary py-2 text-sm transition-colors"
           >
             {item.label}
           </a>

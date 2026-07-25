@@ -14,7 +14,7 @@ const categories: SkillCategory[] = [
 
 export function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
+    <section id="skills" className="mx-auto max-w-6xl px-6 pt-16 pb-24">
       <SectionHeading
         title="Skills"
         subtitle="Technologies and practices I use to build and deliver software."

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import type { ComponentType, ReactNode } from "react";
+import { Mail, MessageSquareText, UserRound } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
@@ -52,27 +54,37 @@ export function Contact() {
         subtitle="Have a project, role, or opportunity in mind? I would be glad to hear from you."
       />
       <AnimatedWrapper>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
-          <Field label="Name" error={errors.name?.message}>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="border-border bg-card/70 space-y-5 rounded-xl border p-6 sm:p-7"
+          noValidate
+        >
+          <p className="text-muted-foreground text-sm">
+            Tell me about your goals and timeline. I usually respond within 24 hours.
+          </p>
+          <Field label="Name" error={errors.name?.message} icon={UserRound}>
             <input
               {...register("name")}
               autoComplete="name"
-              className="border-border bg-background focus:ring-ring w-full rounded-md border px-4 py-3 outline-none focus:ring-2"
+              placeholder="Your name"
+              className="border-border bg-background focus:border-primary/70 focus:ring-primary/20 w-full rounded-lg border px-11 py-3 transition-colors outline-none focus:ring-2"
             />
           </Field>
-          <Field label="Email" error={errors.email?.message}>
+          <Field label="Email" error={errors.email?.message} icon={Mail}>
             <input
               {...register("email")}
               type="email"
               autoComplete="email"
-              className="border-border bg-background focus:ring-ring w-full rounded-md border px-4 py-3 outline-none focus:ring-2"
+              placeholder="you@company.com"
+              className="border-border bg-background focus:border-primary/70 focus:ring-primary/20 w-full rounded-lg border px-11 py-3 transition-colors outline-none focus:ring-2"
             />
           </Field>
-          <Field label="Message" error={errors.message?.message}>
+          <Field label="Message" error={errors.message?.message} icon={MessageSquareText}>
             <textarea
               {...register("message")}
               rows={6}
-              className="border-border bg-background focus:ring-ring w-full resize-y rounded-md border px-4 py-3 outline-none focus:ring-2"
+              placeholder="Share a short brief, role details, or project context."
+              className="border-border bg-background focus:border-primary/70 focus:ring-primary/20 w-full resize-y rounded-lg border px-11 py-3 transition-colors outline-none focus:ring-2"
             />
           </Field>
           <button
@@ -101,16 +113,21 @@ export function Contact() {
 function Field({
   label,
   error,
+  icon: Icon,
   children,
 }: {
   label: string;
   error?: string;
-  children: React.ReactNode;
+  icon: ComponentType<{ className?: string }>;
+  children: ReactNode;
 }) {
   return (
     <label className="block space-y-2">
       <span className="text-sm font-medium">{label}</span>
-      {children}
+      <div className="relative">
+        <Icon className="text-muted-foreground pointer-events-none absolute top-3.5 left-3 size-4" />
+        {children}
+      </div>
       {error ? <span className="text-destructive block text-sm">{error}</span> : null}
     </label>
   );

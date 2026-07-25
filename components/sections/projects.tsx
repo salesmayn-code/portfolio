@@ -30,7 +30,7 @@ export async function Projects() {
         title="Projects"
         subtitle="Selected work across application development, automation, and security."
       />
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="columns-1 gap-6 md:columns-2">
         {projects.map((project, index) => {
           const galleryImages = projectGallery[project.id] ?? [];
 
@@ -40,10 +40,11 @@ export async function Projects() {
               delay={index * 0.08}
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.99 }}
+              className="mb-6 break-inside-avoid"
             >
               <article
                 className={cn(
-                  "border-border bg-card/70 group flex h-full flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:shadow-xl",
+                  "border-border bg-card/70 group flex flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:shadow-xl",
                   project.featured && "border-primary/35 shadow-primary/10 shadow-lg",
                 )}
               >
@@ -104,7 +105,7 @@ export async function Projects() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1 hover:underline"
+                          className="hover:text-primary inline-flex items-center gap-1 transition-colors"
                         >
                           <FaGithub className="size-4" aria-hidden="true" /> Code
                         </a>
@@ -114,7 +115,7 @@ export async function Projects() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1 hover:underline"
+                          className="hover:text-primary inline-flex items-center gap-1 transition-colors"
                         >
                           <ExternalLink className="size-4" /> Live
                         </a>

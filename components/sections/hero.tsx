@@ -18,23 +18,23 @@ export function Hero() {
           I build secure, scalable applications and the reliable delivery pipelines that
           bring them to production.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="/resume/resume.pdf"
-            download
-            className="bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90"
-          >
-            <ArrowDownToLine className="size-4" /> Download resume
-          </a>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
           <a
             href="#projects"
-            className="border-border hover:bg-muted inline-flex items-center gap-2 rounded-md border px-5 py-3 text-sm font-medium transition-colors"
+            className="bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90"
           >
             View projects <ArrowRight className="size-4" />
           </a>
           <a
+            href="/resume/resume.pdf"
+            download
+            className="text-muted-foreground hover:text-primary inline-flex items-center gap-2 text-sm font-medium transition-colors"
+          >
+            <ArrowDownToLine className="size-4" /> Download resume
+          </a>
+          <a
             href="#contact"
-            className="border-border hover:bg-muted inline-flex items-center gap-2 rounded-md border px-5 py-3 text-sm font-medium transition-colors"
+            className="text-muted-foreground hover:text-primary inline-flex items-center gap-2 text-sm font-medium transition-colors"
           >
             Contact me <Mail className="size-4" />
           </a>

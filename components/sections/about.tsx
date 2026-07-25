@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/common/section-heading";
 export function About() {
   return (
     <section id="about" className="border-border/60 border-y">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-6 pt-24 pb-14 md:pb-16">
         <SectionHeading
           title="About me"
           subtitle="Engineering applications from interface to infrastructure."
