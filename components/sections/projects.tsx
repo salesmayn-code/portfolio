@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink, Laptop, Star } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
@@ -30,7 +30,7 @@ export async function Projects() {
         title="Projects"
         subtitle="Selected work across application development, automation, and security."
       />
-      <div className="columns-1 gap-6 md:columns-2">
+      <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => {
           const galleryImages = projectGallery[project.id] ?? [];
 
@@ -40,33 +40,54 @@ export async function Projects() {
               delay={index * 0.08}
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.99 }}
-              className="mb-6 break-inside-avoid"
+              className={cn(project.flagship && "md:col-span-2")}
             >
               <article
                 className={cn(
                   "border-border bg-card/70 group flex flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:shadow-xl",
                   project.featured && "border-primary/35 shadow-primary/10 shadow-lg",
+                  project.flagship && "md:flex-row",
                 )}
               >
-                <div className="bg-muted relative aspect-[16/8] overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="from-background/90 absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent" />
-                  {project.featured ? (
-                    <span className="bg-background/85 border-border absolute top-3 right-3 inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-medium backdrop-blur">
-                      <Star className="text-primary size-3" aria-hidden="true" />
-                      Featured
+                {project.image ? (
+                  <div
+                    className={cn(
+                      "bg-muted relative aspect-[16/8] overflow-hidden",
+                      project.flagship && "md:w-1/2 md:shrink-0",
+                    )}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="from-background/90 absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent" />
+                    {project.featured ? (
+                      <span className="bg-background/85 border-border absolute top-3 right-3 inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-medium backdrop-blur">
+                        <Star className="text-primary size-3" aria-hidden="true" />
+                        Featured
+                      </span>
+                    ) : null}
+                  </div>
+                ) : (
+                  <div className="bg-muted/50 flex aspect-[16/8] items-center justify-center p-6">
+                    <span className="text-muted-foreground text-sm">
+                      Building in public
                     </span>
-                  ) : null}
-                </div>
+                  </div>
+                )}
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-lg font-semibold tracking-tight">
-                    {project.title}
-                  </h3>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-lg font-semibold tracking-tight">
+                      {project.title}
+                    </h3>
+                    {project.status ? (
+                      <span className="border-primary/35 text-primary rounded-full border px-2 py-0.5 text-xs font-medium">
+                        {project.status}
+                      </span>
+                    ) : null}
+                  </div>
                   <p className="text-muted-foreground mt-3 leading-7">
                     {project.description}
                   </p>
@@ -80,6 +101,27 @@ export async function Projects() {
                       </li>
                     ))}
                   </ul>
+                  {project.highlights ? (
+                    <ul className="text-muted-foreground mt-5 space-y-2 text-sm leading-6">
+                      {project.highlights.map((highlight) => (
+                        <li key={highlight} className="flex gap-2">
+                          <span className="text-primary" aria-hidden="true">
+                            →
+                          </span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  {project.deploymentNote ? (
+                    <p className="text-muted-foreground mt-5 flex gap-2 text-sm leading-6">
+                      <Laptop
+                        className="text-primary mt-0.5 size-4 shrink-0"
+                        aria-hidden="true"
+                      />
+                      {project.deploymentNote}
+                    </p>
+                  ) : null}
                   {galleryImages.length > 0 ? (
                     <div className="mt-5 grid grid-cols-3 gap-2">
                       {galleryImages.map((galleryImage, galleryIndex) => (
@@ -99,7 +141,7 @@ export async function Projects() {
                     </div>
                   ) : null}
                   {(project.githubUrl || project.liveUrl) && (
-                    <div className="mt-6 flex gap-4 text-sm font-medium">
+                    <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium">
                       {project.githubUrl ? (
                         <a
                           href={project.githubUrl}
@@ -117,7 +159,7 @@ export async function Projects() {
                           rel="noreferrer"
                           className="hover:text-primary inline-flex items-center gap-1 transition-colors"
                         >
-                          <ExternalLink className="size-4" /> Live
+                          <ExternalLink className="size-4" /> Live demo
                         </a>
                       ) : null}
                     </div>

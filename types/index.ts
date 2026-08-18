@@ -19,11 +19,15 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  flagship?: boolean;
+  status?: "In progress";
+  highlights?: string[];
+  deploymentNote?: string;
 }
 export interface Certificate {
   id: string;

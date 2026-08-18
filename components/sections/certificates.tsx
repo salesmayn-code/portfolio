@@ -1,12 +1,9 @@
 import { Award, ExternalLink } from "lucide-react";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
-import { cn } from "@/lib/utils";
 import { certificates } from "@/data/certificates";
 
 export function Certificates() {
-  const hasSingleCertificate = certificates.length === 1;
-
   return (
     <section id="certificates" className="border-border/60 border-y">
       <div className="mx-auto max-w-6xl px-6 py-24">
@@ -14,12 +11,7 @@ export function Certificates() {
           title="Certificates"
           subtitle="Professional learning that supports my engineering practice."
         />
-        <div
-          className={cn(
-            "grid gap-5",
-            hasSingleCertificate ? "mx-auto max-w-xl grid-cols-1" : "md:grid-cols-2",
-          )}
-        >
+        <div className="grid gap-5 md:grid-cols-2">
           {certificates.map((certificate, index) => (
             <AnimatedWrapper
               key={certificate.id}

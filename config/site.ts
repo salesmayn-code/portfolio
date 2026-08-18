@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Muhammad Saleh Janjua",
-  title: "Muhammad Saleh Janjua — Full-Stack Developer, DevOps & DevSecOps",
+  title: "Muhammad Saleh Janjua — Full-Stack Development & DevOps / CI-CD",
   description:
-    "Software engineer building secure full-stack applications and reliable delivery pipelines with React, Next.js, Node.js, Python, Jenkins, and Docker.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://salesmayn-code.github.io/portfollio",
+    "Full-stack developer building secure applications and reliable CI/CD pipelines with React, Next.js, Node.js, Python, Jenkins, and Docker.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-salesmayn.vercel.app",
   ogImage: "/opengraph-image",
   links: {
     github: "https://github.com/salesmayn-code",

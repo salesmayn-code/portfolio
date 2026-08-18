@@ -8,9 +8,14 @@ export function Hero() {
       className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center px-6 py-20"
     >
       <AnimatedWrapper className="max-w-3xl">
-        <p className="text-primary text-sm font-medium tracking-[0.2em] uppercase">
-          Full-Stack Developer · Software Engineer · DevSecOps · UI/UX Designer
-        </p>
+        <div className="flex flex-wrap gap-2" aria-label="Professional focus areas">
+          <span className="border-primary/35 bg-primary/10 text-primary rounded-full border px-3 py-1 text-xs font-semibold tracking-[0.14em] uppercase">
+            Full-Stack Development
+          </span>
+          <span className="border-primary/35 bg-primary/10 text-primary rounded-full border px-3 py-1 text-xs font-semibold tracking-[0.14em] uppercase">
+            DevOps / CI-CD
+          </span>
+        </div>
         <h1 className="mt-5 text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
           Muhammad Saleh Janjua
         </h1>

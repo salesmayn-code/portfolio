@@ -6,4 +6,10 @@ export const certificates: Certificate[] = [
     issuer: "Microsoft",
     date: "2024",
   },
+  {
+    id: "ibm-applied-devops-engineering",
+    title: "IBM Applied DevOps Engineering",
+    issuer: "Coursera",
+    date: "Professional Certificate",
+  },
 ];
