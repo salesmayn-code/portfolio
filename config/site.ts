@@ -15,6 +15,7 @@ export const siteConfig = {
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
+    { label: "Pipeline", href: "#pipeline" },
     { label: "Projects", href: "#projects" },
     { label: "Certificates", href: "#certificates" },
     { label: "Contact", href: "#contact" },

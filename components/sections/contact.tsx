@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import type { ComponentType, ReactNode } from "react";
-import { Mail, MessageSquareText, UserRound } from "lucide-react";
+import { ArrowUpRight, Mail, MessageSquareText, Send, UserRound } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
+import { siteConfig } from "@/config/site";
 import { contactSchema, type ContactFormValues } from "@/utils/validators";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -48,64 +49,99 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="mx-auto max-w-3xl px-6 py-24">
-      <SectionHeading
-        title="Get in touch"
-        subtitle="Have a project, role, or opportunity in mind? I would be glad to hear from you."
-      />
-      <AnimatedWrapper>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="border-border bg-card/70 space-y-5 rounded-xl border p-6 sm:p-7"
-          noValidate
-        >
-          <p className="text-muted-foreground text-sm">
-            Tell me about your goals and timeline. I usually respond within 24 hours.
-          </p>
-          <Field label="Name" error={errors.name?.message} icon={UserRound}>
-            <input
-              {...register("name")}
-              autoComplete="name"
-              placeholder="Your name"
-              className="border-border bg-background focus:border-primary/70 focus:ring-primary/20 w-full rounded-lg border px-11 py-3 transition-colors outline-none focus:ring-2"
-            />
-          </Field>
-          <Field label="Email" error={errors.email?.message} icon={Mail}>
-            <input
-              {...register("email")}
-              type="email"
-              autoComplete="email"
-              placeholder="you@company.com"
-              className="border-border bg-background focus:border-primary/70 focus:ring-primary/20 w-full rounded-lg border px-11 py-3 transition-colors outline-none focus:ring-2"
-            />
-          </Field>
-          <Field label="Message" error={errors.message?.message} icon={MessageSquareText}>
-            <textarea
-              {...register("message")}
-              rows={6}
-              placeholder="Share a short brief, role details, or project context."
-              className="border-border bg-background focus:border-primary/70 focus:ring-primary/20 w-full resize-y rounded-lg border px-11 py-3 transition-colors outline-none focus:ring-2"
-            />
-          </Field>
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="bg-primary text-primary-foreground rounded-md px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {status === "sending" ? "Sending…" : "Send message"}
-          </button>
-          {status === "sent" ? (
-            <p className="text-sm text-green-600 dark:text-green-400">
-              Message sent. I will get back to you soon.
-            </p>
-          ) : null}
-          {status === "error" ? (
-            <p className="text-destructive text-sm">
-              Message delivery is not configured yet. Please email me directly instead.
-            </p>
-          ) : null}
-        </form>
-      </AnimatedWrapper>
+    <section id="contact">
+      <div className="section-frame">
+        <SectionHeading
+          eyebrow="connection.open"
+          title="Start the next deployment."
+          subtitle="Have a role, project, or engineering problem in mind? Send the context and I’ll take it from there."
+        />
+
+        <AnimatedWrapper>
+          <div className="bg-border grid gap-px lg:grid-cols-[0.72fr_1.28fr]">
+            <aside className="bg-card flex flex-col justify-between p-6 sm:p-8">
+              <div>
+                <p className="text-primary font-mono text-[10px] tracking-[0.1em] uppercase">
+                  direct_channel
+                </p>
+                <h3 className="mt-4 font-mono text-xl font-semibold">Prefer email?</h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-6">
+                  The direct channel is always available, even while automated form
+                  delivery is offline.
+                </p>
+              </div>
+              <a
+                href={siteConfig.links.email}
+                className="border-border hover:border-primary hover:text-primary mt-8 flex items-center justify-between border px-4 py-3 font-mono text-xs transition-colors"
+              >
+                {siteConfig.contactEmail}
+                <ArrowUpRight className="size-4" />
+              </a>
+            </aside>
+
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="bg-card space-y-5 p-6 sm:p-8"
+              noValidate
+            >
+              <div className="border-border flex items-center justify-between border-b pb-4 font-mono text-[10px] tracking-[0.08em] uppercase">
+                <span>message.compose</span>
+                <span className="text-muted-foreground">secure payload</span>
+              </div>
+              <Field label="Name" error={errors.name?.message} icon={UserRound}>
+                <input
+                  {...register("name")}
+                  autoComplete="name"
+                  placeholder="Your name"
+                  className="border-border bg-background focus:border-primary w-full border px-11 py-3 text-sm transition-colors outline-none"
+                />
+              </Field>
+              <Field label="Email" error={errors.email?.message} icon={Mail}>
+                <input
+                  {...register("email")}
+                  type="email"
+                  autoComplete="email"
+                  placeholder="you@company.com"
+                  className="border-border bg-background focus:border-primary w-full border px-11 py-3 text-sm transition-colors outline-none"
+                />
+              </Field>
+              <Field
+                label="Message"
+                error={errors.message?.message}
+                icon={MessageSquareText}
+              >
+                <textarea
+                  {...register("message")}
+                  rows={6}
+                  placeholder="Share the role, project context, or problem to solve."
+                  className="border-border bg-background focus:border-primary w-full resize-y border px-11 py-3 text-sm transition-colors outline-none"
+                />
+              </Field>
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="scan-button bg-primary text-primary-foreground inline-flex min-h-11 items-center gap-2 px-5 font-mono text-xs font-semibold tracking-[0.06em] uppercase disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {status === "sending" ? "Transmitting…" : "Send message"}
+                <Send className="size-4" />
+              </button>
+              <div aria-live="polite">
+                {status === "sent" ? (
+                  <p className="font-mono text-xs text-[var(--signal-pass)]">
+                    [passed] Message delivered. I will get back to you soon.
+                  </p>
+                ) : null}
+                {status === "error" ? (
+                  <p className="font-mono text-xs text-[var(--signal-warn)]">
+                    [deferred] Automated delivery is offline. Use the direct email
+                    channel.
+                  </p>
+                ) : null}
+              </div>
+            </form>
+          </div>
+        </AnimatedWrapper>
+      </div>
     </section>
   );
 }
@@ -123,12 +159,16 @@ function Field({
 }) {
   return (
     <label className="block space-y-2">
-      <span className="text-sm font-medium">{label}</span>
+      <span className="font-mono text-[10px] tracking-[0.08em] uppercase">{label}</span>
       <div className="relative">
         <Icon className="text-muted-foreground pointer-events-none absolute top-3.5 left-3 size-4" />
         {children}
       </div>
-      {error ? <span className="text-destructive block text-sm">{error}</span> : null}
+      {error ? (
+        <span className="block font-mono text-[10px] text-[var(--signal-fail)]">
+          {error}
+        </span>
+      ) : null}
     </label>
   );
 }

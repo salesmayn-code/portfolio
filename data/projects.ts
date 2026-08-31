@@ -35,7 +35,7 @@ export const projects: Project[] = [
       "Interactive browser-based pixel art tool with adjustable grids, layers, palette controls, and real-time drawing.",
     image: "/projects/pixel-art-canvas.jpg",
     techStack: ["JavaScript", "HTML5 Canvas", "CSS3"],
-    githubUrl: "https://github.com/MuhammadSalehJanjua/Pixel-art-canvas",
+    githubUrl: "https://github.com/salesmayn-code/Pixel-art-canvas",
     liveUrl: "https://pixel-art-canvas-gamma.vercel.app/",
   },
   {
@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "Team capacity and sprint dashboard that uses GitHub activity to visualize workload, completion, and velocity.",
     image: "/projects/agile-capacity-tracker.jpg",
     techStack: ["React", "GitHub API", "JavaScript"],
-    githubUrl: "https://github.com/MuhammadSalehJanjua/Agile-Capacity-Tracker",
+    githubUrl: "https://github.com/salesmayn-code/Agile-Capacity-Tracker",
     liveUrl: "https://scad-agile-capacitytracker.vercel.app/",
   },
   {

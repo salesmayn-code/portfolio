@@ -1,26 +1,37 @@
-import { Award, ExternalLink } from "lucide-react";
+import { ExternalLink, ShieldCheck } from "lucide-react";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
 import { certificates } from "@/data/certificates";
 
 export function Certificates() {
   return (
-    <section id="certificates" className="border-border/60 border-y">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+    <section id="certificates" className="border-border bg-background/70 border-y">
+      <div className="section-frame">
         <SectionHeading
-          title="Certificates"
-          subtitle="Professional learning that supports my engineering practice."
+          eyebrow="credentials.verify"
+          title="Continuous learning, verified."
+          subtitle="Professional learning that reinforces the engineering work behind the portfolio."
         />
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="bg-border grid gap-px md:grid-cols-2">
           {certificates.map((certificate, index) => (
             <AnimatedWrapper
               key={certificate.id}
-              delay={index * 0.1}
-              className="border-border bg-card/70 rounded-xl border p-6"
+              delay={index * 0.08}
+              className="bg-card p-6"
             >
-              <Award className="text-primary size-6" />
-              <h3 className="mt-4 text-lg font-semibold">{certificate.title}</h3>
-              <p className="text-muted-foreground mt-1 text-sm">
+              <div className="flex items-start justify-between gap-4">
+                <ShieldCheck
+                  className="size-6 text-[var(--signal-pass)]"
+                  aria-hidden="true"
+                />
+                <span className="text-muted-foreground font-mono text-[10px] tracking-[0.08em] uppercase">
+                  cert_{String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3 className="mt-6 max-w-md font-mono text-lg font-semibold tracking-[-0.02em]">
+                {certificate.title}
+              </h3>
+              <p className="text-muted-foreground mt-2 text-sm">
                 {certificate.issuer} · {certificate.date}
               </p>
               {certificate.credentialUrl ? (
@@ -28,11 +39,15 @@ export function Certificates() {
                   href={certificate.credentialUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-primary mt-4 inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                  className="text-primary mt-5 inline-flex items-center gap-2 font-mono text-xs uppercase hover:underline"
                 >
-                  View credential <ExternalLink className="size-4" />
+                  verify credential <ExternalLink className="size-3.5" />
                 </a>
-              ) : null}
+              ) : (
+                <p className="text-muted-foreground mt-5 font-mono text-[10px] tracking-[0.06em] uppercase">
+                  status: completed
+                </p>
+              )}
             </AnimatedWrapper>
           ))}
         </div>

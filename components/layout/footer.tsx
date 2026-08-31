@@ -1,42 +1,62 @@
-import { Mail } from "lucide-react";
+import { ArrowUp, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="border-border/60 border-t">
-      <div className="text-muted-foreground mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm sm:flex-row sm:items-center sm:justify-between">
-        <p>
-          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-        </p>
-        <div className="flex items-center gap-4">
+    <footer className="border-border bg-card border-t">
+      <div className="mx-auto grid max-w-6xl gap-6 px-6 py-8 sm:grid-cols-[1fr_auto] sm:items-end">
+        <div>
+          <p className="text-primary font-mono text-[10px] tracking-[0.1em] uppercase">
+            build.status // passed
+          </p>
+          <p className="text-muted-foreground mt-3 text-sm">
+            © {new Date().getFullYear()} {siteConfig.name}. Engineered with intent.
+          </p>
+        </div>
+        <div className="flex items-center gap-1">
+          <FooterLink href={siteConfig.links.github} label="GitHub">
+            <FaGithub className="size-4" />
+          </FooterLink>
+          <FooterLink href={siteConfig.links.linkedin} label="LinkedIn">
+            <FaLinkedin className="size-4" />
+          </FooterLink>
+          <FooterLink href={siteConfig.links.email} label="Email">
+            <Mail className="size-4" />
+          </FooterLink>
           <a
-            href={siteConfig.links.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="hover:text-primary transition-colors"
+            href="#top"
+            aria-label="Back to top"
+            className="border-border hover:border-primary hover:text-primary ml-2 grid size-9 place-items-center border transition-colors"
           >
-            <FaGithub className="size-5" aria-hidden="true" />
-          </a>
-          <a
-            href={siteConfig.links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="hover:text-primary transition-colors"
-          >
-            <FaLinkedin className="size-5" aria-hidden="true" />
-          </a>
-          <a
-            href={siteConfig.links.email}
-            aria-label="Email Muhammad Saleh Janjua"
-            className="hover:text-primary transition-colors"
-          >
-            <Mail className="size-5" />
+            <ArrowUp className="size-4" />
           </a>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterLink({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  const isExternal = href.startsWith("http");
+
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
+      className="text-muted-foreground hover:text-primary grid size-9 place-items-center transition-colors"
+    >
+      {children}
+    </a>
   );
 }

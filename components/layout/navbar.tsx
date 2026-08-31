@@ -15,29 +15,32 @@ export function Navbar() {
   const activeSection = useActiveSection(sectionIds);
 
   return (
-    <header className="border-border/60 bg-background/80 sticky top-0 z-50 border-b backdrop-blur">
+    <header className="border-border bg-background/90 sticky top-0 z-50 border-b backdrop-blur-xl">
       <nav
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"
         aria-label="Primary"
       >
-        <a
-          href="#top"
-          className="hover:text-primary font-semibold tracking-tight transition-colors"
-        >
-          {siteConfig.name}
+        <a href="#top" className="group flex items-center gap-3">
+          <span className="border-primary text-primary grid size-8 place-items-center border font-mono text-xs font-bold">
+            MSJ
+          </span>
+          <span className="hidden font-mono text-[11px] tracking-[0.08em] uppercase sm:block">
+            <span className="text-muted-foreground">deploy/</span>
+            portfolio
+          </span>
         </a>
 
-        <ul className="hidden items-center gap-5 md:flex">
+        <ul className="hidden items-center gap-5 lg:flex xl:hidden">
           {siteConfig.nav.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
                 aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
                 className={cn(
-                  "hover:text-primary text-sm transition-colors",
+                  "nav-link font-mono text-[11px] tracking-[0.06em] uppercase transition-colors",
                   activeSection === item.href.slice(1)
                     ? "text-primary"
-                    : "text-muted-foreground",
+                    : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 {item.label}
@@ -46,25 +49,45 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
+          <span className="text-muted-foreground hidden items-center gap-2 font-mono text-[10px] tracking-[0.08em] uppercase sm:flex">
+            <span className="size-1.5 bg-[var(--signal-pass)]" aria-hidden="true" />
+            available
+          </span>
+          <span className="bg-border mx-2 hidden h-4 w-px sm:block" />
           <button
             type="button"
             onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
             aria-label="Toggle colour theme"
-            className="hover:bg-muted rounded-md p-2 transition-colors"
+            className="hover:bg-muted relative grid size-9 place-items-center transition-colors"
           >
-            {resolvedTheme === "dark" ? (
+            <span
+              className={cn(
+                "absolute transition-all duration-300",
+                resolvedTheme === "dark"
+                  ? "rotate-0 opacity-100"
+                  : "-rotate-180 opacity-0",
+              )}
+            >
               <Sun className="size-4" />
-            ) : (
+            </span>
+            <span
+              className={cn(
+                "absolute transition-all duration-300",
+                resolvedTheme !== "dark"
+                  ? "rotate-0 opacity-100"
+                  : "rotate-180 opacity-0",
+              )}
+            >
               <Moon className="size-4" />
-            )}
+            </span>
           </button>
           <button
             type="button"
             onClick={() => setOpen((isOpen) => !isOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={open}
-            className="hover:bg-muted rounded-md p-2 transition-colors md:hidden"
+            className="hover:bg-muted grid size-9 place-items-center transition-colors lg:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -73,21 +96,23 @@ export function Navbar() {
 
       <div
         className={cn(
-          "grid overflow-hidden border-t border-transparent px-6 transition-all md:hidden",
-          open ? "border-border/60 max-h-96 py-3" : "max-h-0",
+          "grid overflow-hidden border-t border-transparent px-6 transition-all lg:hidden",
+          open ? "border-border max-h-[30rem] py-3" : "max-h-0",
         )}
       >
-        {siteConfig.nav.map((item) => (
+        {siteConfig.nav.map((item, index) => (
           <a
             key={item.href}
             href={item.href}
             onClick={() => setOpen(false)}
-            className="text-muted-foreground hover:text-primary py-2 text-sm transition-colors"
+            className="border-border text-muted-foreground hover:text-primary flex items-center gap-3 border-b py-3 font-mono text-xs tracking-[0.06em] uppercase transition-colors last:border-0"
           >
+            <span className="text-primary">{String(index + 1).padStart(2, "0")}</span>
             {item.label}
           </a>
         ))}
       </div>
+      <span className="boot-progress" aria-hidden="true" />
     </header>
   );
 }

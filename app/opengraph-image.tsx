@@ -8,24 +8,32 @@ export default function OpenGraphImage() {
     <div
       style={{
         alignItems: "center",
-        background: "#09090b",
-        color: "#fafafa",
+        background: "#0b0d10",
+        color: "#e8eaed",
         display: "flex",
         height: "100%",
         padding: "72px",
         width: "100%",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-        <p style={{ color: "#a1a1aa", fontSize: 28, margin: 0 }}>
-          Full-Stack Development · DevOps · DevSecOps
+      <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+        <p style={{ color: "#4c9eff", fontFamily: "monospace", fontSize: 24, margin: 0 }}>
+          &gt; DEPLOYMENT PROFILE // SOFTWARE ENGINEER
         </p>
-        <h1 style={{ fontSize: 72, letterSpacing: "-0.04em", lineHeight: 1, margin: 0 }}>
-          {siteConfig.name}
+        <h1
+          style={{
+            fontFamily: "monospace",
+            fontSize: 70,
+            letterSpacing: "-0.05em",
+            lineHeight: 1.05,
+            margin: 0,
+            maxWidth: 1000,
+          }}
+        >
+          Software that ships like a pipeline.
         </h1>
-        <p style={{ color: "#d4d4d8", fontSize: 32, margin: 0 }}>
-          Secure applications. Reliable delivery.
-        </p>
+        <p style={{ color: "#8b92a0", fontSize: 27, margin: 0 }}>{siteConfig.name}</p>
+        <div style={{ background: "#3dd68c", display: "flex", height: 4, width: 160 }} />
       </div>
     </div>,
     size,

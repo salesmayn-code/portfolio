@@ -5,6 +5,7 @@ export interface GitHubRepository {
   description: string | null;
   language: string | null;
   stargazers_count: number;
+  updated_at: string;
   fork: boolean;
   archived: boolean;
 }

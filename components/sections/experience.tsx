@@ -1,30 +1,58 @@
+import { Check } from "lucide-react";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
 import { experience } from "@/data/experience";
 
 export function Experience() {
   return (
-    <section id="experience" className="border-border/60 border-y">
-      <div className="mx-auto max-w-4xl px-6 py-24">
+    <section id="experience" className="border-border bg-background/70 border-y">
+      <div className="section-frame">
         <SectionHeading
-          title="Experience"
-          subtitle="Hands-on web engineering, DevOps, and delivery experience."
+          eyebrow="history.log"
+          title="Experience measured in systems improved."
+          subtitle="Hands-on engineering work across product delivery, platform reliability, and frontend performance."
         />
-        <div className="border-border space-y-10 border-l pl-7">
+
+        <div className="border-border border-t">
           {experience.map((item, index) => (
-            <AnimatedWrapper key={item.id} delay={index * 0.1} className="relative">
-              <span className="bg-primary absolute top-1.5 -left-[34px] size-3 rounded-full" />
-              <h3 className="text-lg font-semibold">{item.role}</h3>
-              <p className="text-muted-foreground mt-1 text-sm">
-                {item.company}
-                {item.location ? ` · ${item.location}` : ""} · {item.startDate} –{" "}
-                {item.endDate}
-              </p>
-              <ul className="text-muted-foreground mt-4 list-disc space-y-2 pl-5 leading-7">
-                {item.description.map((description) => (
-                  <li key={description}>{description}</li>
-                ))}
-              </ul>
+            <AnimatedWrapper key={item.id} delay={index * 0.08}>
+              <article className="border-border grid gap-6 border-b py-8 md:grid-cols-[10rem_1fr] md:gap-10">
+                <div>
+                  <p className="text-primary font-mono text-xs font-medium">
+                    RUN_{String(index + 1).padStart(2, "0")}
+                  </p>
+                  <p className="text-muted-foreground mt-2 font-mono text-[10px] leading-5 tracking-[0.06em] uppercase">
+                    {item.startDate}
+                    <br />→ {item.endDate}
+                  </p>
+                </div>
+                <div>
+                  <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+                    <div>
+                      <h3 className="font-mono text-xl font-semibold tracking-[-0.03em]">
+                        {item.role}
+                      </h3>
+                      <p className="text-muted-foreground mt-1 text-sm">
+                        {item.company}
+                        {item.location ? ` · ${item.location}` : ""}
+                      </p>
+                    </div>
+                    <span className="flex w-fit items-center gap-2 border border-[var(--signal-pass)]/40 px-2 py-1 font-mono text-[9px] tracking-[0.08em] text-[var(--signal-pass)] uppercase">
+                      <Check className="size-3" /> completed
+                    </span>
+                  </div>
+                  <ul className="mt-6 grid gap-3 text-sm leading-6 md:grid-cols-2">
+                    {item.description.map((description) => (
+                      <li key={description} className="text-muted-foreground flex gap-3">
+                        <span className="text-primary font-mono" aria-hidden="true">
+                          &gt;
+                        </span>
+                        {description}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
             </AnimatedWrapper>
           ))}
         </div>

@@ -41,5 +41,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local project plan
+# local planning and design documents
 Portfolio.md
+Design.MD
+
+# local resume source files (the published copy lives in public/resume/)
+/Cv/
