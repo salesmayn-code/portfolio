@@ -44,6 +44,11 @@ next-env.d.ts
 # local planning and design documents
 Portfolio.md
 Design.MD
+/Conversation.md
+/context.md
 
 # local resume source files (the published copy lives in public/resume/)
 /Cv/
+
+# private source material (selected runtime assets live under public/)
+/ProjImg/

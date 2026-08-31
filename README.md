@@ -1,48 +1,88 @@
-This is the portfolio website for Muhammad Saleh Janjua, built with Next.js, TypeScript, Tailwind CSS, and Vercel Analytics.
+# Muhammad Saleh Janjua — Engineering Portfolio
 
-## Getting started
+**Full-Stack Development · DevOps / CI/CD · DevSecOps**
 
-Install dependencies and run the development server:
+[View the live portfolio](https://portfolio-salesmayn.vercel.app) ·
+[GitHub](https://github.com/salesmayn-code) ·
+[LinkedIn](https://www.linkedin.com/in/muhammadsalehjanjua) ·
+[Email](mailto:MuhammadSalehJanjua@gmail.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> Software that ships like a pipeline: staged, verified, and deployed.
 
-Open [http://localhost:3000](http://localhost:3000) to see the site.
+This repository powers my personal engineering portfolio. It presents the work I do across
+the complete delivery path—from accessible interfaces and backend services to automated,
+secure production workflows.
 
-## Environment variables
+## Engineering focus
 
-Copy `.env.example` to `.env.local` and provide the values before deploying:
+- Building full-stack products with React, Next.js, TypeScript, Node.js, and Python
+- Designing CI/CD workflows with Jenkins, GitHub Actions, Docker, Nginx, and PM2
+- Applying secure authentication, validation, and secrets-management practices
+- Improving reliability, maintainability, performance, and developer workflow
 
-- `NEXT_PUBLIC_SITE_URL` — the Vercel production URL or custom domain.
-- `RESEND_API_KEY` — enables contact email delivery.
-- `RESEND_FROM_EMAIL` — a sender address verified in Resend.
+## Featured work
 
-Without `RESEND_API_KEY`, the contact endpoint returns a safe `503` response and the UI directs visitors to email directly.
+### Mimaar Associates CI/CD Pipeline
 
-## Deployment
+An end-to-end Jenkins delivery pipeline for a Next.js and TypeScript platform. The workflow
+automates linting, testing, Prisma migrations, production builds, and deployment to Ubuntu
+behind Nginx and PM2. The portfolio includes an interactive visualization of the complete
+release sequence.
 
-Import this repository into Vercel as a Next.js project, then add the environment variables above in **Project Settings → Environment Variables**. Vercel Analytics activates automatically after deployment.
+### Cryptojacking Detection Tool
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A final-year security project that monitors CPU and memory behavior to identify unauthorized
+cryptocurrency mining. It combines Python monitoring, FastAPI services, alerting, machine
+learning, SQLite, and a React dashboard.
 
-## Learn More
+### Pixel Art Canvas
 
-To learn more about Next.js, take a look at the following resources:
+An interactive browser-based drawing tool with adjustable grids, layers, palette controls,
+and real-time HTML5 Canvas rendering.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Agile Capacity Tracker
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A team-capacity and sprint dashboard that uses GitHub activity to visualize workload,
+completion, and delivery velocity.
 
-## Deploy on Vercel
+### LinkPulse
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A URL-shortening and analytics product currently in development, focused on making link
+performance easier to understand.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Professional experience
+
+- **Web Engineering Intern — Mimaar Associates:** Full-stack product work, PostgreSQL and
+  Firebase integration, authentication hardening, and Jenkins delivery automation.
+- **Front-end Developer Intern — InzeMarketing:** Responsive interface development,
+  Lighthouse performance improvements, analytics integration, and SEO enhancements.
+
+## Portfolio identity
+
+The interface uses a deployment-control-surface aesthetic inspired by the systems I build:
+
+- A live terminal-style engineering status console
+- A staged, animated CI/CD pipeline walkthrough
+- Status colors with consistent meaning: passed, running, queued, and failed
+- JetBrains Mono for technical hierarchy and Inter for readable body content
+- Dark and light themes with reduced-motion accessibility support
+- A flagship-first project layout and live GitHub activity feed
+
+## Technical foundation
+
+| Area         | Technologies                               |
+| ------------ | ------------------------------------------ |
+| Application  | Next.js 16, React 19, TypeScript           |
+| Interface    | Tailwind CSS 4, Framer Motion, shadcn/ui   |
+| Validation   | React Hook Form, Zod                       |
+| Integrations | GitHub API, Vercel Analytics               |
+| Delivery     | pnpm, ESLint, Prettier, Husky, lint-staged |
+| Hosting      | Vercel                                     |
+
+## Contact
+
+I am open to full-stack, DevOps, CI/CD, and software-engineering opportunities.
+
+**Muhammad Saleh Janjua**
+
+[MuhammadSalehJanjua@gmail.com](mailto:MuhammadSalehJanjua@gmail.com)
