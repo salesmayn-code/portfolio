@@ -52,3 +52,6 @@ Design.MD
 
 # private source material (selected runtime assets live under public/)
 /ProjImg/
+
+# local agent customizations
+.agents/

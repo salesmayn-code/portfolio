@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
@@ -21,9 +22,16 @@ export function Navbar() {
         aria-label="Primary"
       >
         <a href="#top" className="group flex items-center gap-3">
-          <span className="border-primary text-primary grid size-8 place-items-center border font-mono text-xs font-bold">
-            MSJ
-          </span>
+          <div className="border-border/80 group-hover:border-primary/80 relative size-8 shrink-0 overflow-hidden rounded-lg border transition-all duration-200 group-hover:scale-105 group-hover:shadow-[0_0_12px_rgba(56,189,248,0.3)]">
+            <Image
+              src={siteConfig.icon}
+              alt={siteConfig.name}
+              width={32}
+              height={32}
+              className="size-full object-cover"
+              priority
+            />
+          </div>
           <span className="hidden font-mono text-[11px] tracking-[0.08em] uppercase sm:block">
             <span className="text-muted-foreground">deploy/</span>
             portfolio

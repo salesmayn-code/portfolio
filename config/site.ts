@@ -5,6 +5,7 @@ export const siteConfig = {
     "Full-stack developer building secure applications and reliable CI/CD pipelines with React, Next.js, Node.js, Python, Jenkins, and Docker.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-salesmayn.vercel.app",
   ogImage: "/opengraph-image",
+  icon: "/images/portfolio-icon.svg",
   links: {
     github: "https://github.com/salesmayn-code",
     linkedin: "https://www.linkedin.com/in/muhammadsalehjanjua",

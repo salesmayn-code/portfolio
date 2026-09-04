@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUp, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
@@ -6,13 +7,24 @@ export function Footer() {
   return (
     <footer className="border-border bg-card border-t">
       <div className="mx-auto grid max-w-6xl gap-6 px-6 py-8 sm:grid-cols-[1fr_auto] sm:items-end">
-        <div>
-          <p className="text-primary font-mono text-[10px] tracking-[0.1em] uppercase">
-            build.status // passed
-          </p>
-          <p className="text-muted-foreground mt-3 text-sm">
-            © {new Date().getFullYear()} {siteConfig.name}. Engineered with intent.
-          </p>
+        <div className="flex items-center gap-3">
+          <div className="border-border relative size-8 shrink-0 overflow-hidden rounded-lg border">
+            <Image
+              src={siteConfig.icon}
+              alt={siteConfig.name}
+              width={32}
+              height={32}
+              className="size-full object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-primary font-mono text-[10px] tracking-[0.1em] uppercase">
+              build.status // passed
+            </p>
+            <p className="text-muted-foreground mt-1 text-sm">
+              © {new Date().getFullYear()} {siteConfig.name}. Engineered with intent.
+            </p>
+          </div>
         </div>
         <div className="flex items-center gap-1">
           <FooterLink href={siteConfig.links.github} label="GitHub">
