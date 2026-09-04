@@ -3,5 +3,6 @@ node_modules
 dist
 coverage
 pnpm-lock.yaml
+docs/
 Portfolio.md
 Design.MD

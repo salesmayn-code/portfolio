@@ -15,7 +15,7 @@ export function Hero() {
         <div>
           <AnimatedWrapper delay={0.08}>
             <p className="text-primary font-mono text-xs tracking-[0.12em] uppercase">
-              Muhammad Saleh Janjua // Software Engineer
+              Muhammad Saleh Janjua // Full-Stack Software Engineer & Product Engineer
             </p>
           </AnimatedWrapper>
 

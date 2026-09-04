@@ -42,10 +42,11 @@ yarn-error.log*
 next-env.d.ts
 
 # local planning and design documents
+/docs/
 Portfolio.md
 Design.MD
-/Conversation.md
-/context.md
+Conversation.md
+context.md
 
 # local resume source files (the published copy lives in public/resume/)
 /Cv/

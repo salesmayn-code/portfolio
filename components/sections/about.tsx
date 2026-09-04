@@ -34,7 +34,7 @@ export function About() {
         <SectionHeading
           eyebrow="profile.init"
           title="Engineering the product and the path to production."
-          subtitle="I work across the application boundary—where interface decisions, backend reliability, and delivery systems meet."
+          subtitle="I work across the application boundary where interface decisions, backend reliability, and delivery systems meet."
         />
 
         <div className="grid items-start gap-12 lg:grid-cols-[20rem_1fr]">

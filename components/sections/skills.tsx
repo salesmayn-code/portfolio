@@ -26,7 +26,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="capabilities.list"
           title="A stack built around shipping reliably."
-          subtitle="Tools are grouped by the job they perform in the system—not by logo walls or trend lists."
+          subtitle="Tools are grouped by the job they perform in the system not by logo walls or trend lists."
         />
 
         <div className="bg-border grid gap-px lg:grid-cols-2">
