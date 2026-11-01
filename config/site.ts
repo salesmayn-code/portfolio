@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Muhammad Saleh Janjua",
-  title: "Muhammad Saleh Janjua — AI-Augmented Software Engineer",
+  title: "Muhammad Saleh Janjua | AI-Augmented Software Engineer",
   description:
     "AI-augmented software engineer building full-stack systems across TypeScript, Python, C#, and Java, with project work in IT service management, rental marketplaces, HRMS, and .NET analytics, plus tested CI/CD delivery.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-salesmayn.vercel.app",

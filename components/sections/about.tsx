@@ -34,7 +34,7 @@ export function About() {
         <SectionHeading
           eyebrow="profile.init"
           title="Engineering the product and the path to production."
-          subtitle="I build full-stack systems across TypeScript, Python, C#, and Java, and use AI-assisted workflows for implementation, tests, and review—then verify through CI and deployment checks."
+          subtitle="I build full-stack systems across TypeScript, Python, C#, and Java, and use AI-assisted workflows for implementation, tests, and review, then verify through CI and deployment checks."
         />
 
         <div className="grid items-start gap-12 lg:grid-cols-[20rem_1fr]">
@@ -81,7 +81,7 @@ export function About() {
                 education
               </p>
               <p className="mt-2 text-sm">
-                BS Computer Software Engineering — PAF-IAST, 2022–2026
+                BS Computer Software Engineering, PAF-IAST, 2022-2026
               </p>
             </div>
 

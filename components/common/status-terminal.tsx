@@ -4,7 +4,7 @@ import type { CSSProperties } from "react";
 import { TerminalSquare } from "lucide-react";
 
 const entries = [
-  { command: "$ whoami", output: "> ai-augmented full-stack" },
+  { command: "$ whoami", output: "> AI-Augmented Software Engineer" },
   { command: "$ status --current", output: "> OpsDesk [shipped]" },
   { command: "$ last-role", output: "> Netlogg.ai [HRMS]" },
   { command: "$ uptime", output: "> 3 internships · 8 builds" },

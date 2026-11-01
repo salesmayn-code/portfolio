@@ -8,7 +8,7 @@ import { siteConfig } from "@/config/site";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: `Projects — ${siteConfig.name}`,
+  title: `Projects | ${siteConfig.name}`,
   description:
     "The full project archive from Muhammad Saleh Janjua: full-stack products, delivery automation, security tooling, and in-progress work.",
 };

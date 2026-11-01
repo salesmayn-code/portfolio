@@ -32,8 +32,8 @@ export function Hero() {
             <p className="text-muted-foreground mt-7 max-w-xl text-lg leading-8">
               I build full-stack systems and the delivery workflows that ship them. Recent
               work includes OpsDesk’s SLA and audit workflows, Libaas Kiraya’s rental
-              engine, HRMS Pakistan, and LinkPulse — across TypeScript, Python, C#, and
-              Java, with AI-assisted implementation and automated verification.
+              engine, HRMS Pakistan, and LinkPulse. I work across TypeScript, Python, C#,
+              and Java, with AI-assisted implementation and automated verification.
             </p>
           </AnimatedWrapper>
 

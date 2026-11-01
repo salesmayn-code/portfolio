@@ -1,4 +1,4 @@
-# Muhammad Saleh Janjua — Engineering Portfolio
+# Muhammad Saleh Janjua | Engineering Portfolio
 
 **AI-Augmented Software Engineer · Polyglot Full-Stack · Delivery**
 
@@ -36,13 +36,13 @@ A full-stack IT service management platform covering ticket lifecycles, SLA auto
 role-based access, asset management, incident and change workflows, and audit trails. Built
 with Next.js, NestJS, PostgreSQL, Prisma, Redis, and BullMQ.
 
-### [Libaas Kiraya](https://github.com/salesmayn-code/libaas-kiraya) — In development
+### [Libaas Kiraya](https://github.com/salesmayn-code/libaas-kiraya) (In development)
 
 A multi-vendor occasion-wear rental marketplace built with Medusa v2 and Next.js. It handles
 vendor onboarding and approval, date-aware availability with database-enforced rental
 windows, 15-minute holds, rental checkout, deposits, inspections, disputes, and payouts.
 
-### HRMS Pakistan — Private project
+### HRMS Pakistan (Private project)
 
 A single-organization HR management system covering employee records, attendance, leave,
 compensation, payroll, approvals, and reporting, with role-based access and audit-ready
@@ -72,7 +72,7 @@ interface, PostgreSQL, and GitHub issue synchronization.
 A browser-based pixel art tool with a responsive grid drawing interface and real-time HTML5
 Canvas rendering.
 
-### [LinkPulse](https://github.com/salesmayn-code/LinkPulse) — In development
+### [LinkPulse](https://github.com/salesmayn-code/LinkPulse) (In development)
 
 A self-hostable URL shortener and click-analytics dashboard built with .NET 10, ASP.NET Core,
 Blazor, Clerk, and SQL Server. Next: rate limiting, health checks, telemetry, and deployment
@@ -80,14 +80,14 @@ verification.
 
 ## Professional experience
 
-- **Software Engineering Intern — Netlogg.ai (July–October 2026):** Built HRMS Pakistan, a
+- **Software Engineering Intern, Netlogg.ai (July-October 2026):** Built HRMS Pakistan, a
   full-stack HR management system covering employee records, attendance, leave, compensation,
   payroll, approvals, and reporting. Worked across the Next.js application, PostgreSQL/Prisma
   data model, and server-side authorization, and contributed to deployment and supporting
   implementation work.
-- **Web Engineering Intern — Mimaar Associates:** Full-stack product work, PostgreSQL and
+- **Web Engineering Intern, Mimaar Associates:** Full-stack product work, PostgreSQL and
   Firebase integration, authentication hardening, and Jenkins delivery automation.
-- **Front-end Developer Intern — InzeMarketing:** Responsive interface development,
+- **Front-end Developer Intern, InzeMarketing:** Responsive interface development,
   Lighthouse performance improvements, analytics integration, and SEO enhancements.
 
 ## Portfolio identity
