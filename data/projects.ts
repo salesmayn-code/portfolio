@@ -23,10 +23,10 @@ export const projects: Project[] = [
     title: "OpsDesk",
     description:
       "Full-stack IT service management platform with ticket lifecycles, SLA automation, role-based access, asset management, incident workflows, and audit trails.",
+    image: "/projects/opsdesk.jpg",
     techStack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
     featured: true,
     githubUrl: "https://github.com/salesmayn-code/OpsDesk",
-    liveUrl: "https://opsdesk-orpin.vercel.app",
   },
   {
     id: "libaas-kiraya",
