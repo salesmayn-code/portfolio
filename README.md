@@ -18,7 +18,7 @@ lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
 
 ## Preview
 
-![Portfolio home page](docs/screenshots/home.png)
+![Portfolio home page](public/screenshots/home.png)
 
 ## Engineering focus
 
