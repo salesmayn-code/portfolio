@@ -3,8 +3,8 @@ import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { StatusTerminal } from "@/components/common/status-terminal";
 
 const metrics = [
-  { value: "02", label: "internships" },
-  { value: "04", label: "shipped projects" },
+  { value: "03", label: "internships" },
+  { value: "08", label: "project builds" },
   { value: "01", label: "flagship pipeline" },
 ];
 

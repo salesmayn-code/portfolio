@@ -362,3 +362,7 @@
     display: none;
   }
 }
+
+section[id] {
+  scroll-margin-top: 5rem;
+}

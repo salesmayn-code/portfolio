@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 import { SectionHeading } from "@/components/common/section-heading";
 import { experience } from "@/data/experience";
@@ -36,6 +36,14 @@ export function Experience() {
                         {item.company}
                         {item.location ? ` · ${item.location}` : ""}
                       </p>
+                      {item.projectUrl ? (
+                        <a
+                          href={item.projectUrl}
+                          className="text-primary mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.06em] uppercase hover:underline"
+                        >
+                          view HRMS project <ArrowUpRight className="size-3.5" />
+                        </a>
+                      ) : null}
                     </div>
                     <span className="flex w-fit items-center gap-2 border border-[var(--signal-pass)]/40 px-2 py-1 font-mono text-[9px] tracking-[0.08em] text-[var(--signal-pass)] uppercase">
                       <Check className="size-3" /> completed

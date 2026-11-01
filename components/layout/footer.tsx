@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUp, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
@@ -36,13 +37,13 @@ export function Footer() {
           <FooterLink href={siteConfig.links.email} label="Email">
             <Mail className="size-4" />
           </FooterLink>
-          <a
-            href="#top"
+          <Link
+            href="/#top"
             aria-label="Back to top"
             className="border-border hover:border-primary hover:text-primary ml-2 grid size-9 place-items-center border transition-colors"
           >
             <ArrowUp className="size-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

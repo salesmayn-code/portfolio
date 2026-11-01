@@ -1,5 +1,19 @@
 import type { Experience } from "@/types";
+
 export const experience: Experience[] = [
+  {
+    id: "netlogg-software-engineering-intern",
+    role: "Software Engineering Intern",
+    company: "Netlogg.ai",
+    startDate: "July 2026",
+    endDate: "October 2026",
+    projectUrl: "/#hrms",
+    description: [
+      "Built HRMS Pakistan, a full-stack HR management system covering employee records, attendance, leave, compensation, payroll, approvals, and reporting.",
+      "Worked across the Next.js application, PostgreSQL/Prisma data model, and server-side authorization for protected workflows.",
+      "Contributed to deployment and supporting implementation work, with the majority of the internship focused on the HRMS product.",
+    ],
+  },
   {
     id: "mimaar-web-engineering-intern",
     role: "Web Engineering Intern",

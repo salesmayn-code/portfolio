@@ -14,6 +14,7 @@ export interface Experience {
   startDate: string;
   endDate: string | "Present";
   description: string[];
+  projectUrl?: string;
 }
 export interface Project {
   id: string;
@@ -23,17 +24,11 @@ export interface Project {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
-  featured?: boolean;
   flagship?: boolean;
+  homepage?: boolean;
+  private?: boolean;
+  detailsUrl?: string;
   status?: "In progress";
   highlights?: string[];
   deploymentNote?: string;
-}
-export interface Certificate {
-  id: string;
-  title: string;
-  issuer: string;
-  date: string;
-  credentialUrl?: string;
-  image?: string;
 }

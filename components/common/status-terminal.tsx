@@ -5,9 +5,9 @@ import { TerminalSquare } from "lucide-react";
 
 const entries = [
   { command: "$ whoami", output: "> full-stack / devops engineer" },
-  { command: "$ status --current", output: "> LinkPulse [in progress]" },
-  { command: "$ last-deploy", output: "> Mimaar CI/CD [passed]" },
-  { command: "$ uptime", output: "> 2 internships · 4 shipped" },
+  { command: "$ status --current", output: "> OpsDesk [shipped]" },
+  { command: "$ last-role", output: "> Netlogg.ai [HRMS]" },
+  { command: "$ uptime", output: "> 3 internships · 8 builds" },
 ];
 
 function typeStyle(text: string, delay: number): CSSProperties {

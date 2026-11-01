@@ -1,15 +1,20 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
 
-const sectionIds = siteConfig.nav.map((item) => item.href.slice(1));
+const navItems = siteConfig.nav.filter((item) => item.href.startsWith("/#"));
+const sectionIds = navItems.map((item) => item.href.slice(2));
 
 export function SectionRail() {
   const activeSection = useActiveSection(sectionIds);
   const shouldReduceMotion = useReducedMotion();
+  const pathname = usePathname();
+
+  if (pathname !== "/") return null;
 
   return (
     <nav
@@ -18,8 +23,8 @@ export function SectionRail() {
     >
       <div className="bg-border absolute top-2 bottom-2 left-[5px] w-px" />
       <ol className="relative space-y-4">
-        {siteConfig.nav.map((item, index) => {
-          const id = item.href.slice(1);
+        {navItems.map((item, index) => {
+          const id = item.href.slice(2);
           const isActive = activeSection === id;
 
           return (

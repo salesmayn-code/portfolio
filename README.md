@@ -13,6 +13,9 @@ This repository powers my personal engineering portfolio. It presents the work I
 the complete delivery path—from accessible interfaces and backend services to automated,
 secure production workflows.
 
+The home page leads with OpsDesk, Libaas Kiraya, and HRMS Pakistan. The rest of the work
+lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
+
 ## Engineering focus
 
 - Building full-stack products with React, Next.js, TypeScript, Node.js, and Python
@@ -21,13 +24,6 @@ secure production workflows.
 - Improving reliability, maintainability, performance, and developer workflow
 
 ## Selected work
-
-### [Mimaar Associates CI/CD Pipeline](https://github.com/salesmayn-code/MimaarAssociates)
-
-An end-to-end Jenkins delivery pipeline for a Next.js and TypeScript platform. The workflow
-automates linting, testing, Prisma migrations, production builds, and deployment to Ubuntu
-behind Nginx and PM2. The portfolio includes an interactive visualization of the release
-sequence.
 
 ### [OpsDesk](https://github.com/salesmayn-code/OpsDesk)
 
@@ -40,6 +36,20 @@ with Next.js, NestJS, PostgreSQL, Prisma, Redis, and BullMQ.
 A multi-vendor occasion-wear rental marketplace built with Medusa v2 and Next.js. It handles
 vendor onboarding and approval, date-aware availability with database-enforced rental
 windows, 15-minute holds, rental checkout, deposits, inspections, disputes, and payouts.
+
+### HRMS Pakistan — Private project
+
+A single-organization HR management system covering employee records, attendance, leave,
+compensation, payroll, approvals, and reporting, with role-based access and audit-ready
+workflows. Built during a software engineering internship at Netlogg.ai. The repository is
+private; the portfolio card summarises the delivered work.
+
+### [Mimaar Associates CI/CD Pipeline](https://github.com/salesmayn-code/MimaarAssociates)
+
+An end-to-end Jenkins delivery pipeline for a Next.js and TypeScript platform. The workflow
+automates linting, testing, Prisma migrations, production builds, and deployment to Ubuntu
+behind Nginx and PM2. The portfolio includes an interactive visualization of the release
+sequence.
 
 ### [Cryptojacking Detection Tool](https://github.com/salesmayn-code/Cryptojacking_Detection_Tool)
 
@@ -65,6 +75,11 @@ verification.
 
 ## Professional experience
 
+- **Software Engineering Intern — Netlogg.ai (July–October 2026):** Built HRMS Pakistan, a
+  full-stack HR management system covering employee records, attendance, leave, compensation,
+  payroll, approvals, and reporting. Worked across the Next.js application, PostgreSQL/Prisma
+  data model, and server-side authorization, and contributed to deployment and supporting
+  implementation work.
 - **Web Engineering Intern — Mimaar Associates:** Full-stack product work, PostgreSQL and
   Firebase integration, authentication hardening, and Jenkins delivery automation.
 - **Front-end Developer Intern — InzeMarketing:** Responsive interface development,
@@ -79,7 +94,7 @@ The interface uses a deployment-control-surface aesthetic inspired by the system
 - Status colors with consistent meaning: passed, running, queued, and failed
 - JetBrains Mono for technical hierarchy and Inter for readable body content
 - Dark and light themes with reduced-motion accessibility support
-- A flagship-first project layout and live GitHub activity feed
+- A flagship-first home page with a separate project archive and live GitHub activity feed
 
 ## Technical foundation
 
