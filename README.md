@@ -60,7 +60,8 @@ Canvas rendering.
 ### [LinkPulse](https://github.com/salesmayn-code/LinkPulse) — In development
 
 A self-hostable URL shortener and click-analytics dashboard built with .NET 10, ASP.NET Core,
-Blazor, Clerk, and SQL Server.
+Blazor, Clerk, and SQL Server. Next: rate limiting, health checks, telemetry, and deployment
+verification.
 
 ## Professional experience
 

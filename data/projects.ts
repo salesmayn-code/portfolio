@@ -72,7 +72,7 @@ export const projects: Project[] = [
     id: "linkpulse",
     title: "LinkPulse",
     description:
-      "URL shortener and analytics dashboard currently in development, focused on making link performance easier to understand.",
+      "URL shortener and analytics dashboard currently in development, focused on making link performance easier to understand. Next: rate limiting, health checks, telemetry, and deployment verification.",
     techStack: [".NET 10", "ASP.NET Core", "Blazor", "SQL Server", "Clerk"],
     githubUrl: "https://github.com/salesmayn-code/LinkPulse",
     status: "In progress",
