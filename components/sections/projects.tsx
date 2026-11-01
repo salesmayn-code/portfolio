@@ -10,6 +10,11 @@ import { cn } from "@/lib/utils";
 import type { Project } from "@/types";
 
 const projectGallery: Partial<Record<string, string[]>> = {
+  opsdesk: [
+    "/projects/opsdesk-overview.jpg",
+    "/projects/opsdesk-features.jpg",
+    "/projects/opsdesk-signin.jpg",
+  ],
   "libaas-kiraya": [
     "/projects/libaas-kiraya-home.jpg",
     "/projects/libaas-kiraya-search.jpg",
@@ -171,10 +176,11 @@ function ProjectCard({ project }: { project: Project }) {
           <ProjectStatus project={project} />
         </div>
       ) : (
-        <div className="border-border flex aspect-[16/8] flex-col justify-center border-b bg-[#080a0d] p-6 font-mono text-xs dark:bg-[#080a0d]">
+        <div className="border-border relative flex aspect-[16/8] flex-col justify-center border-b bg-[#080a0d] p-6 font-mono text-xs dark:bg-[#080a0d]">
           <p className="text-[#4c9eff]">$ status --current</p>
           <p className="mt-2 text-[#f5a623]">&gt; building in public</p>
           <span className="terminal-cursor mt-3" aria-hidden="true" />
+          <ProjectStatus project={project} />
         </div>
       )}
 
