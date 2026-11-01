@@ -1,6 +1,6 @@
 # Muhammad Saleh Janjua — Engineering Portfolio
 
-**Full-Stack Development · DevOps / CI/CD · DevSecOps**
+**Full-Stack Development · DevOps / CI-CD**
 
 [View the live portfolio](https://portfolio-salesmayn.vercel.app) ·
 [GitHub](https://github.com/salesmayn-code) ·
@@ -20,35 +20,47 @@ secure production workflows.
 - Applying secure authentication, validation, and secrets-management practices
 - Improving reliability, maintainability, performance, and developer workflow
 
-## Featured work
+## Selected work
 
-### Mimaar Associates CI/CD Pipeline
+### [Mimaar Associates CI/CD Pipeline](https://github.com/salesmayn-code/MimaarAssociates)
 
 An end-to-end Jenkins delivery pipeline for a Next.js and TypeScript platform. The workflow
 automates linting, testing, Prisma migrations, production builds, and deployment to Ubuntu
-behind Nginx and PM2. The portfolio includes an interactive visualization of the complete
-release sequence.
+behind Nginx and PM2. The portfolio includes an interactive visualization of the release
+sequence.
 
-### Cryptojacking Detection Tool
+### [OpsDesk](https://github.com/salesmayn-code/OpsDesk)
+
+A full-stack IT service management platform covering ticket lifecycles, SLA automation,
+role-based access, asset management, incident and change workflows, and audit trails. Built
+with Next.js, NestJS, PostgreSQL, Prisma, Redis, and BullMQ.
+
+### [Libaas Kiraya](https://github.com/salesmayn-code/libaas-kiraya) — In development
+
+A multi-vendor occasion-wear rental marketplace built with Medusa v2 and Next.js. It handles
+vendor onboarding and approval, date-aware availability with database-enforced rental
+windows, 15-minute holds, rental checkout, deposits, inspections, disputes, and payouts.
+
+### [Cryptojacking Detection Tool](https://github.com/salesmayn-code/Cryptojacking_Detection_Tool)
 
 A final-year security project that monitors CPU and memory behavior to identify unauthorized
 cryptocurrency mining. It combines Python monitoring, FastAPI services, alerting, machine
 learning, SQLite, and a React dashboard.
 
-### Pixel Art Canvas
+### [Agile Capacity Tracker](https://github.com/salesmayn-code/AgileCapacityTracker)
 
-An interactive browser-based drawing tool with adjustable grids, layers, palette controls,
-and real-time HTML5 Canvas rendering.
+A full-stack sprint and team-capacity dashboard with a Java/Spring Boot backend, a Next.js
+interface, PostgreSQL, and GitHub issue synchronization.
 
-### Agile Capacity Tracker
+### [Pixel Art Canvas](https://github.com/MuhammadSalehJanjua/Pixel-art-canvas)
 
-A team-capacity and sprint dashboard that uses GitHub activity to visualize workload,
-completion, and delivery velocity.
+A browser-based pixel art tool with a responsive grid drawing interface and real-time HTML5
+Canvas rendering.
 
-### LinkPulse
+### [LinkPulse](https://github.com/salesmayn-code/LinkPulse) — In development
 
-A URL-shortening and analytics product currently in development, focused on making link
-performance easier to understand.
+A self-hostable URL shortener and click-analytics dashboard built with .NET 10, ASP.NET Core,
+Blazor, Clerk, and SQL Server.
 
 ## Professional experience
 

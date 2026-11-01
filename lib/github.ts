@@ -23,7 +23,10 @@ export async function getLatestRepositories(username: string) {
     if (!response.ok) return [];
 
     const repositories = (await response.json()) as GitHubRepository[];
-    return repositories.filter((repository) => !repository.fork && !repository.archived);
+    return repositories.filter(
+      (repository) =>
+        !repository.fork && !repository.archived && repository.name !== username,
+    );
   } catch {
     return [];
   }

@@ -29,6 +29,17 @@ export const projects: Project[] = [
     liveUrl: "https://opsdesk-orpin.vercel.app",
   },
   {
+    id: "libaas-kiraya",
+    title: "Libaas Kiraya",
+    description:
+      "Multi-vendor occasion-wear rental marketplace with vendor onboarding, date-aware availability, rental checkout, deposits, inspections, disputes, and payouts.",
+    image: "/projects/libaas-kiraya.jpg",
+    techStack: ["Medusa v2", "Next.js", "PostgreSQL", "TypeScript", "Tailwind CSS"],
+    featured: true,
+    githubUrl: "https://github.com/salesmayn-code/libaas-kiraya",
+    status: "In progress",
+  },
+  {
     id: "cryptojacking-detection-tool",
     title: "Cryptojacking Detection Tool",
     description:
@@ -46,7 +57,6 @@ export const projects: Project[] = [
     image: "/projects/pixel-art-canvas.jpg",
     techStack: ["JavaScript", "HTML5 Canvas", "CSS3"],
     githubUrl: "https://github.com/MuhammadSalehJanjua/Pixel-art-canvas",
-    liveUrl: "https://pixel-art-canvas-gamma.vercel.app/",
   },
   {
     id: "agile-capacity-tracker",

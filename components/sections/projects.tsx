@@ -10,6 +10,11 @@ import { cn } from "@/lib/utils";
 import type { Project } from "@/types";
 
 const projectGallery: Partial<Record<string, string[]>> = {
+  "libaas-kiraya": [
+    "/projects/libaas-kiraya-home.jpg",
+    "/projects/libaas-kiraya-search.jpg",
+    "/projects/libaas-kiraya-listing.jpg",
+  ],
   "cryptojacking-detection-tool": [
     "/projects/cryptojacking-detection-tool-1.png",
     "/projects/cryptojacking-detection-tool-2.png",
