@@ -19,6 +19,16 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "opsdesk",
+    title: "OpsDesk",
+    description:
+      "Full-stack IT service management platform with ticket lifecycles, SLA automation, role-based access, asset management, incident workflows, and audit trails.",
+    techStack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
+    featured: true,
+    githubUrl: "https://github.com/salesmayn-code/OpsDesk",
+    liveUrl: "https://opsdesk-orpin.vercel.app",
+  },
+  {
     id: "cryptojacking-detection-tool",
     title: "Cryptojacking Detection Tool",
     description:
@@ -32,20 +42,20 @@ export const projects: Project[] = [
     id: "pixel-art-canvas",
     title: "Pixel Art Canvas",
     description:
-      "Interactive browser-based pixel art tool with adjustable grids, layers, palette controls, and real-time drawing.",
+      "Browser-based pixel art canvas with a responsive grid drawing interface and real-time editing.",
     image: "/projects/pixel-art-canvas.jpg",
     techStack: ["JavaScript", "HTML5 Canvas", "CSS3"],
-    githubUrl: "https://github.com/salesmayn-code/Pixel-art-canvas",
+    githubUrl: "https://github.com/MuhammadSalehJanjua/Pixel-art-canvas",
     liveUrl: "https://pixel-art-canvas-gamma.vercel.app/",
   },
   {
     id: "agile-capacity-tracker",
     title: "Agile Capacity Tracker",
     description:
-      "Team capacity and sprint dashboard that uses GitHub activity to visualize workload, completion, and velocity.",
+      "Full-stack sprint and team-capacity dashboard with a Java backend, Next.js interface, PostgreSQL, and GitHub issue synchronization.",
     image: "/projects/agile-capacity-tracker.jpg",
-    techStack: ["React", "GitHub API", "JavaScript"],
-    githubUrl: "https://github.com/salesmayn-code/Agile-Capacity-Tracker",
+    techStack: ["Java", "Spring Boot", "Next.js", "PostgreSQL", "GitHub API"],
+    githubUrl: "https://github.com/salesmayn-code/AgileCapacityTracker",
     liveUrl: "https://scad-agile-capacitytracker.vercel.app/",
   },
   {
@@ -53,7 +63,7 @@ export const projects: Project[] = [
     title: "LinkPulse",
     description:
       "URL shortener and analytics dashboard currently in development, focused on making link performance easier to understand.",
-    techStack: ["URL Shortening", "Analytics", "Dashboard"],
+    techStack: [".NET 10", "ASP.NET Core", "Blazor", "SQL Server", "Clerk"],
     githubUrl: "https://github.com/salesmayn-code/LinkPulse",
     status: "In progress",
   },

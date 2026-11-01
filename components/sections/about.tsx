@@ -75,6 +75,15 @@ export function About() {
               </p>
             </div>
 
+            <div className="border-border mt-8 border-t pt-5">
+              <p className="text-primary font-mono text-[10px] tracking-[0.08em] uppercase">
+                education
+              </p>
+              <p className="mt-2 text-sm">
+                BS Computer Software Engineering — PAF-IAST, 2022–2026
+              </p>
+            </div>
+
             <div className="border-border mt-10 border-t">
               {capabilities.map(({ icon: Icon, code, title, description }) => (
                 <div
