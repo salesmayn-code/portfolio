@@ -16,6 +16,10 @@ secure production workflows.
 The home page leads with OpsDesk, Libaas Kiraya, and HRMS Pakistan. The rest of the work
 lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
 
+## Preview
+
+![Portfolio home page](docs/screenshots/home.png)
+
 ## Engineering focus
 
 - Building full-stack products with React, Next.js, TypeScript, Node.js, and Python

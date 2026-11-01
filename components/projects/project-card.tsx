@@ -21,9 +21,9 @@ export const projectGallery: Partial<Record<string, string[]>> = {
     "/projects/agile-capacity-tracker-spring-planning.jpg",
   ],
   linkpulse: [
-    "/projects/linkpulse-links.jpg",
-    "/projects/linkpulse-chart.jpg",
-    "/projects/linkpulse-table.jpg",
+    "/projects/linkpulse-dashboard.jpg",
+    "/projects/linkpulse-analytics.jpg",
+    "/projects/linkpulse-landing.jpg",
   ],
 };
 export function ProjectCard({ project }: { project: Project }) {
