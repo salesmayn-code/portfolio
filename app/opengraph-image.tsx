@@ -18,7 +18,7 @@ export default function OpenGraphImage() {
     >
       <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
         <p style={{ color: "#4c9eff", fontFamily: "monospace", fontSize: 24, margin: 0 }}>
-          &gt; DEPLOYMENT PROFILE // SOFTWARE ENGINEER
+          &gt; DEPLOYMENT PROFILE // AI-AUGMENTED SOFTWARE ENGINEER
         </p>
         <h1
           style={{

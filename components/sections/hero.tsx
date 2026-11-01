@@ -15,7 +15,10 @@ export function Hero() {
         <div>
           <AnimatedWrapper delay={0.08}>
             <p className="text-primary font-mono text-xs tracking-[0.12em] uppercase">
-              Muhammad Saleh Janjua // Full-Stack Software Engineer & Product Engineer
+              Muhammad Saleh Janjua // AI-Augmented Software Engineer
+              <span className="text-muted-foreground mt-2 block">
+                Polyglot full-stack · TypeScript · Python · C# · Java
+              </span>
             </p>
           </AnimatedWrapper>
 
@@ -27,8 +30,10 @@ export function Hero() {
 
           <AnimatedWrapper delay={0.24}>
             <p className="text-muted-foreground mt-7 max-w-xl text-lg leading-8">
-              I engineer secure full-stack products and the delivery systems that move
-              them from commit to production—staged, verified, and observable.
+              I build full-stack systems and the delivery workflows that ship them. Recent
+              work includes OpsDesk’s SLA and audit workflows, Libaas Kiraya’s rental
+              engine, HRMS Pakistan, and LinkPulse — across TypeScript, Python, C#, and
+              Java, with AI-assisted implementation and automated verification.
             </p>
           </AnimatedWrapper>
 

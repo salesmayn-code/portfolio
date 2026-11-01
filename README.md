@@ -1,6 +1,6 @@
 # Muhammad Saleh Janjua — Engineering Portfolio
 
-**Full-Stack Development · DevOps / CI-CD**
+**AI-Augmented Software Engineer · Polyglot Full-Stack · Delivery**
 
 [View the live portfolio](https://portfolio-salesmayn.vercel.app) ·
 [GitHub](https://github.com/salesmayn-code) ·
@@ -9,9 +9,10 @@
 
 > Software that ships like a pipeline: staged, verified, and deployed.
 
-This repository powers my personal engineering portfolio. It presents the work I do across
-the complete delivery path—from accessible interfaces and backend services to automated,
-secure production workflows.
+This repository powers my personal engineering portfolio. I build full-stack systems and
+the delivery workflows around them, working across TypeScript/Next.js, Python/FastAPI,
+C#/.NET, and Java/Spring Boot. I use AI-assisted implementation and test generation, then
+review and verify the result with automated tests and CI.
 
 The home page leads with OpsDesk, Libaas Kiraya, and HRMS Pakistan. The rest of the work
 lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
@@ -22,10 +23,10 @@ lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
 
 ## Engineering focus
 
-- Building full-stack products with React, Next.js, TypeScript, Node.js, and Python
-- Designing CI/CD workflows with Jenkins, GitHub Actions, Docker, Nginx, and PM2
-- Applying secure authentication, validation, and secrets-management practices
-- Improving reliability, maintainability, performance, and developer workflow
+- Building full-stack systems across TypeScript/Next.js, Python/FastAPI, C#/.NET, and Java/Spring Boot
+- Designing APIs, PostgreSQL data models, RBAC, SLA/audit workflows, and transactional outbox patterns
+- Using AI-assisted implementation and test generation with human review, then validating through automated tests and CI/CD
+- Shipping with Jenkins, GitHub Actions, Docker, PM2, and Nginx
 
 ## Selected work
 
@@ -99,21 +100,23 @@ The interface uses a deployment-control-surface aesthetic inspired by the system
 - JetBrains Mono for technical hierarchy and Inter for readable body content
 - Dark and light themes with reduced-motion accessibility support
 - A flagship-first home page with a separate project archive and live GitHub activity feed
+- An AI-augmented workflow using agents for scoped implementation and test generation, with human review and verification
 
 ## Technical foundation
 
-| Area         | Technologies                               |
-| ------------ | ------------------------------------------ |
-| Application  | Next.js 16, React 19, TypeScript           |
-| Interface    | Tailwind CSS 4, Framer Motion, shadcn/ui   |
-| Validation   | React Hook Form, Zod                       |
-| Integrations | GitHub API, Vercel Analytics               |
-| Delivery     | pnpm, ESLint, Prettier, Husky, lint-staged |
-| Hosting      | Vercel                                     |
+| Area         | Technologies                                                    |
+| ------------ | --------------------------------------------------------------- |
+| Application  | Next.js 16, React 19, TypeScript                                |
+| Interface    | Tailwind CSS 4, Framer Motion, shadcn/ui                        |
+| Validation   | React Hook Form, Zod                                            |
+| Integrations | GitHub API, Vercel Analytics                                    |
+| Delivery     | pnpm, ESLint, Prettier, Husky, lint-staged                      |
+| Workflow     | Agent-assisted implementation, AI test generation, human review |
+| Hosting      | Vercel                                                          |
 
 ## Contact
 
-I am open to full-stack, DevOps, CI/CD, and software-engineering opportunities.
+I am open to AI-augmented software engineering, full-stack/backend, and platform or delivery roles.
 
 **Muhammad Saleh Janjua**
 

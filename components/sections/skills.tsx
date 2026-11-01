@@ -7,15 +7,22 @@ const tracks = [
     id: "app-stack",
     index: "01",
     title: "Application stack",
-    description: "Frontend, backend, data, and product tooling for complete web systems.",
-    categories: ["Frontend", "Backend", "Data", "Tools"],
+    description: "Interfaces, APIs, and services for complete product flows.",
+    categories: ["Frontend", "Backend"],
   },
   {
-    id: "delivery-stack",
+    id: "platform-stack",
     index: "02",
-    title: "Delivery stack",
-    description: "Automation and security practices for dependable releases.",
-    categories: ["DevOps", "DevSecOps"],
+    title: "Platform stack",
+    description: "Data, automation, and the runtime path to production.",
+    categories: ["Data", "DevOps"],
+  },
+  {
+    id: "engineering-stack",
+    index: "03",
+    title: "Engineering stack",
+    description: "Security, AI-assisted workflow, and the tools around the codebase.",
+    categories: ["DevSecOps", "AI", "Tools"],
   },
 ];
 
@@ -26,10 +33,10 @@ export function Skills() {
         <SectionHeading
           eyebrow="capabilities.list"
           title="A stack built around shipping reliably."
-          subtitle="Tools are grouped by the job they perform in the system not by logo walls or trend lists."
+          subtitle="Tools are grouped by the job they perform in the system, not by logo walls or trend lists."
         />
 
-        <div className="bg-border grid gap-px lg:grid-cols-2">
+        <div className="bg-border grid gap-px lg:grid-cols-3">
           {tracks.map((track, index) => (
             <AnimatedWrapper
               key={track.id}
@@ -58,7 +65,7 @@ export function Skills() {
                 {track.description}
               </p>
 
-              <ul className="bg-border mt-7 grid grid-cols-1 gap-px sm:grid-cols-2">
+              <ul className="bg-border mt-7 grid grid-cols-1 gap-px">
                 {skills
                   .filter((skill) => track.categories.includes(skill.category))
                   .map((skill) => (

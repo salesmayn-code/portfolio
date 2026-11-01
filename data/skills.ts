@@ -17,6 +17,11 @@ export const skills: Skill[] = [
   { name: "PostgreSQL", icon: "postgresql", category: "Data" },
   { name: "Prisma ORM", icon: "prisma", category: "Data" },
   { name: "Firebase", icon: "firebase", category: "Data" },
+  { name: "Redis", icon: "redis", category: "Data" },
   { name: "Git & GitHub", icon: "github", category: "Tools" },
   { name: "Figma", icon: "figma", category: "Tools" },
+  { name: "AI-assisted implementation", icon: "ai", category: "AI" },
+  { name: "Agentic coding workflows", icon: "ai", category: "AI" },
+  { name: "AI test generation", icon: "ai", category: "AI" },
+  { name: "AI-assisted code review", icon: "ai", category: "AI" },
 ];

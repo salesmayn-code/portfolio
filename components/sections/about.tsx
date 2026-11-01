@@ -7,23 +7,23 @@ const capabilities = [
   {
     icon: Code2,
     code: "01 / BUILD",
-    title: "Product engineering",
+    title: "AI-assisted product engineering",
     description:
-      "Accessible React interfaces backed by dependable Node.js and Python services.",
+      "Scoped agent-assisted implementation and test generation, followed by human review of diffs, validation, authorization, and edge cases.",
   },
   {
     icon: GitBranch,
     code: "02 / SHIP",
-    title: "Delivery automation",
+    title: "Polyglot systems",
     description:
-      "Repeatable CI/CD workflows with quality gates from commit through deployment.",
+      "TypeScript, Python, C#, and Java used across real projects, from Next.js and NestJS APIs to FastAPI services and .NET/Blazor apps.",
   },
   {
     icon: ShieldCheck,
-    code: "03 / SECURE",
-    title: "Operational confidence",
+    code: "03 / VERIFY",
+    title: "Delivery and verification",
     description:
-      "Security-minded implementation, validation, and maintainable infrastructure.",
+      "Automated tests, CI/CD, deployment checks, and production-minded workflows rather than one-off manual releases.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function About() {
         <SectionHeading
           eyebrow="profile.init"
           title="Engineering the product and the path to production."
-          subtitle="I work across the application boundary where interface decisions, backend reliability, and delivery systems meet."
+          subtitle="I build full-stack systems across TypeScript, Python, C#, and Java, and use AI-assisted workflows for implementation, tests, and review—then verify through CI and deployment checks."
         />
 
         <div className="grid items-start gap-12 lg:grid-cols-[20rem_1fr]">
@@ -63,15 +63,16 @@ export function About() {
           <AnimatedWrapper delay={0.08}>
             <div className="text-muted-foreground max-w-3xl space-y-5 text-lg leading-8">
               <p>
-                I am a software engineer focused on thoughtful web experiences,
-                automation, and secure delivery workflows. My work spans React and Next.js
-                interfaces, Node.js and Python services, and CI/CD systems with Jenkins,
-                Docker, and GitHub Actions.
+                I am an AI-augmented software engineer. I build full-stack systems and the
+                delivery workflows around them, working across TypeScript/Next.js,
+                Python/FastAPI, C#/.NET, and Java/Spring Boot.
               </p>
               <p>
-                I enjoy solving problems end to end: translating a product need into a
-                reliable system, shaping the developer workflow around it, and keeping the
-                result maintainable in production.
+                Recent work includes OpsDesk (SLA automation, RBAC, optimistic locking,
+                transactional outbox, audit trails), Libaas Kiraya (a Medusa v2 rental
+                marketplace with date-aware availability), HRMS Pakistan at Netlogg.ai
+                (employee, attendance, leave, and payroll workflows), and LinkPulse (.NET
+                10 / Blazor link analytics).
               </p>
             </div>
 

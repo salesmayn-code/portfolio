@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Muhammad Saleh Janjua",
-  title: "Muhammad Saleh Janjua — Full-Stack Development & DevOps / CI-CD",
+  title: "Muhammad Saleh Janjua — AI-Augmented Software Engineer",
   description:
-    "Full-stack developer building secure applications and reliable CI/CD pipelines with React, Next.js, Node.js, Python, Jenkins, and Docker.",
+    "AI-augmented software engineer building full-stack systems across TypeScript, Python, C#, and Java, with project work in IT service management, rental marketplaces, HRMS, and .NET analytics, plus tested CI/CD delivery.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-salesmayn.vercel.app",
   ogImage: "/opengraph-image",
   icon: "/images/portfolio-icon.svg",
