@@ -21,8 +21,8 @@ const tracks = [
     id: "engineering-stack",
     index: "03",
     title: "Engineering stack",
-    description: "Security, AI-assisted workflow, and the tools around the codebase.",
-    categories: ["DevSecOps", "AI", "Tools"],
+    description: "Security, system design, and the tools around the codebase.",
+    categories: ["DevSecOps", "Architecture", "Tools"],
   },
 ];
 

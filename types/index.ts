@@ -1,5 +1,5 @@
 export type SkillCategory =
-  "Frontend" | "Backend" | "DevOps" | "DevSecOps" | "Data" | "Tools" | "AI";
+  "Frontend" | "Backend" | "DevOps" | "DevSecOps" | "Data" | "Tools" | "Architecture";
 
 export interface Skill {
   name: string;

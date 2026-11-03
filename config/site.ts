@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Muhammad Saleh Janjua",
-  title: "Muhammad Saleh Janjua | AI-Augmented Software Engineer",
+  title: "Muhammad Saleh Janjua | Full-Stack Developer",
   description:
-    "AI-augmented software engineer building full-stack systems across TypeScript, Python, C#, and Java, with project work in IT service management, rental marketplaces, HRMS, and .NET analytics, plus tested CI/CD delivery.",
+    "Full-stack developer building web applications with Next.js, Node.js, PostgreSQL, TypeScript, and C#. Projects include OpsDesk, Libaas Kiraya, HRMS Pakistan, and LinkPulse.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-salesmayn.vercel.app",
   ogImage: "/opengraph-image",
   icon: "/images/portfolio-icon.svg",
@@ -16,7 +16,6 @@ export const siteConfig = {
     { label: "About", href: "/#about" },
     { label: "Skills", href: "/#skills" },
     { label: "Experience", href: "/#experience" },
-    { label: "Pipeline", href: "/#pipeline" },
     { label: "Projects", href: "/projects" },
     { label: "Contact", href: "/#contact" },
   ],

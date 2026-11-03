@@ -7,23 +7,23 @@ const capabilities = [
   {
     icon: Code2,
     code: "01 / BUILD",
-    title: "AI-assisted product engineering",
+    title: "Full-stack product engineering",
     description:
-      "Scoped agent-assisted implementation and test generation, followed by human review of diffs, validation, authorization, and edge cases.",
+      "Next.js interfaces backed by Node.js, Python, and .NET services, with PostgreSQL data models.",
   },
   {
     icon: GitBranch,
     code: "02 / SHIP",
-    title: "Polyglot systems",
+    title: "Delivery automation",
     description:
-      "TypeScript, Python, C#, and Java used across real projects, from Next.js and NestJS APIs to FastAPI services and .NET/Blazor apps.",
+      "Jenkins and GitHub Actions pipelines covering tests, migrations, builds, and deployment checks.",
   },
   {
     icon: ShieldCheck,
     code: "03 / VERIFY",
-    title: "Delivery and verification",
+    title: "Reliability and verification",
     description:
-      "Automated tests, CI/CD, deployment checks, and production-minded workflows rather than one-off manual releases.",
+      "Automated tests, RBAC, audit trails, and production-minded data workflows.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function About() {
         <SectionHeading
           eyebrow="profile.init"
           title="Engineering the product and the path to production."
-          subtitle="I build full-stack systems across TypeScript, Python, C#, and Java, and use AI-assisted workflows for implementation, tests, and review, then verify through CI and deployment checks."
+          subtitle="I build full-stack systems across TypeScript, Python, and C#, and verify them with automated tests and CI."
         />
 
         <div className="grid items-start gap-12 lg:grid-cols-[20rem_1fr]">
@@ -63,9 +63,9 @@ export function About() {
           <AnimatedWrapper delay={0.08}>
             <div className="text-muted-foreground max-w-3xl space-y-5 text-lg leading-8">
               <p>
-                I am an AI-augmented software engineer. I build full-stack systems and the
-                delivery workflows around them, working across TypeScript/Next.js,
-                Python/FastAPI, C#/.NET, and Java/Spring Boot.
+                I am a full-stack developer. I build web applications and the delivery
+                workflows around them, working across Next.js and TypeScript, Node.js,
+                Python/FastAPI, and C#/.NET.
               </p>
               <p>
                 Recent work includes OpsDesk (SLA automation, RBAC, optimistic locking,

@@ -20,8 +20,8 @@ export const skills: Skill[] = [
   { name: "Redis", icon: "redis", category: "Data" },
   { name: "Git & GitHub", icon: "github", category: "Tools" },
   { name: "Figma", icon: "figma", category: "Tools" },
-  { name: "AI-assisted implementation", icon: "ai", category: "AI" },
-  { name: "Agentic coding workflows", icon: "ai", category: "AI" },
-  { name: "AI test generation", icon: "ai", category: "AI" },
-  { name: "AI-assisted code review", icon: "ai", category: "AI" },
+  { name: "System design", icon: "system", category: "Architecture" },
+  { name: "API design", icon: "api", category: "Architecture" },
+  { name: "Database design", icon: "database", category: "Architecture" },
+  { name: "Technical documentation", icon: "document", category: "Architecture" },
 ];

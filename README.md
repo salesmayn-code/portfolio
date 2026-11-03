@@ -1,6 +1,6 @@
 # Muhammad Saleh Janjua | Engineering Portfolio
 
-**AI-Augmented Software Engineer · Polyglot Full-Stack · Delivery**
+**Full-Stack Developer · Next.js / Node.js / PostgreSQL**
 
 [View the live portfolio](https://portfolio-salesmayn.vercel.app) ·
 [GitHub](https://github.com/salesmayn-code) ·
@@ -10,9 +10,8 @@
 > Software that ships like a pipeline: staged, verified, and deployed.
 
 This repository powers my personal engineering portfolio. I build full-stack systems and
-the delivery workflows around them, working across TypeScript/Next.js, Python/FastAPI,
-C#/.NET, and Java/Spring Boot. I use AI-assisted implementation and test generation, then
-review and verify the result with automated tests and CI.
+the delivery workflows around them, working across TypeScript/Next.js, Node.js,
+Python/FastAPI, and C#/.NET. I verify changes with automated tests and CI.
 
 The home page leads with OpsDesk, Libaas Kiraya, and HRMS Pakistan. The rest of the work
 lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
@@ -23,9 +22,9 @@ lives in the [project archive](https://portfolio-salesmayn.vercel.app/projects).
 
 ## Engineering focus
 
-- Building full-stack systems across TypeScript/Next.js, Python/FastAPI, C#/.NET, and Java/Spring Boot
+- Building full-stack systems across TypeScript/Next.js, Node.js, Python/FastAPI, and C#/.NET
 - Designing APIs, PostgreSQL data models, RBAC, SLA/audit workflows, and transactional outbox patterns
-- Using AI-assisted implementation and test generation with human review, then validating through automated tests and CI/CD
+- Improving reliability with automated tests, CI, and deployment checks
 - Shipping with Jenkins, GitHub Actions, Docker, PM2, and Nginx
 
 ## Selected work
@@ -94,29 +93,27 @@ verification.
 
 The interface uses a deployment-control-surface aesthetic inspired by the systems I build:
 
-- A live terminal-style engineering status console
-- A staged, animated CI/CD pipeline walkthrough
-- Status colors with consistent meaning: passed, running, queued, and failed
+- A direct selected-systems panel with links to the flagship work
+- Consistent status colors for passed, running, queued, and failed states
 - JetBrains Mono for technical hierarchy and Inter for readable body content
 - Dark and light themes with reduced-motion accessibility support
 - A flagship-first home page with a separate project archive and live GitHub activity feed
-- An AI-augmented workflow using agents for scoped implementation and test generation, with human review and verification
 
 ## Technical foundation
 
-| Area         | Technologies                                                    |
-| ------------ | --------------------------------------------------------------- |
-| Application  | Next.js 16, React 19, TypeScript                                |
-| Interface    | Tailwind CSS 4, Framer Motion, shadcn/ui                        |
-| Validation   | React Hook Form, Zod                                            |
-| Integrations | GitHub API, Vercel Analytics                                    |
-| Delivery     | pnpm, ESLint, Prettier, Husky, lint-staged                      |
-| Workflow     | Agent-assisted implementation, AI test generation, human review |
-| Hosting      | Vercel                                                          |
+| Area         | Technologies                                                 |
+| ------------ | ------------------------------------------------------------ |
+| Application  | Next.js 16, React 19, TypeScript                             |
+| Interface    | Tailwind CSS 4, Framer Motion, shadcn/ui                     |
+| Validation   | React Hook Form, Zod                                         |
+| Integrations | GitHub API, Vercel Analytics                                 |
+| Delivery     | pnpm, ESLint, Prettier, Husky, lint-staged                   |
+| Architecture | System and API design, database modeling, RBAC, audit trails |
+| Hosting      | Vercel                                                       |
 
 ## Contact
 
-I am open to AI-augmented software engineering, full-stack/backend, and platform or delivery roles.
+I am open to full-stack/backend and platform or delivery roles.
 
 **Muhammad Saleh Janjua**
 

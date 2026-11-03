@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/common/section-heading";
 import { siteConfig } from "@/config/site";
 import { contactSchema, type ContactFormValues } from "@/utils/validators";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "sent" | "fallback";
 
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
@@ -33,6 +33,15 @@ export function Contact() {
       return;
     }
 
+    const openEmailFallback = (data: ContactFormValues) => {
+      const subject = encodeURIComponent(`Portfolio message from ${data.name}`);
+      const body = encodeURIComponent(
+        `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`,
+      );
+      window.location.href = `mailto:${siteConfig.contactEmail}?subject=${subject}&body=${body}`;
+      setStatus("fallback");
+    };
+
     setStatus("sending");
     try {
       const response = await fetch("/api/contact", {
@@ -40,11 +49,14 @@ export function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed.data),
       });
-      if (!response.ok) throw new Error("Message could not be sent");
+      if (!response.ok) {
+        openEmailFallback(parsed.data);
+        return;
+      }
       reset();
       setStatus("sent");
     } catch {
-      setStatus("error");
+      openEmailFallback(parsed.data);
     }
   };
 
@@ -66,8 +78,7 @@ export function Contact() {
                 </p>
                 <h3 className="mt-4 font-mono text-xl font-semibold">Prefer email?</h3>
                 <p className="text-muted-foreground mt-3 text-sm leading-6">
-                  The direct channel is always available, even while automated form
-                  delivery is offline.
+                  Use the direct channel below if you prefer email.
                 </p>
               </div>
               <a
@@ -86,7 +97,7 @@ export function Contact() {
             >
               <div className="border-border flex items-center justify-between border-b pb-4 font-mono text-[10px] tracking-[0.08em] uppercase">
                 <span>message.compose</span>
-                <span className="text-muted-foreground">secure payload</span>
+                <span className="text-muted-foreground">direct message</span>
               </div>
               <Field label="Name" error={errors.name?.message} icon={UserRound}>
                 <input
@@ -131,10 +142,10 @@ export function Contact() {
                     [passed] Message delivered. I will get back to you soon.
                   </p>
                 ) : null}
-                {status === "error" ? (
+                {status === "fallback" ? (
                   <p className="font-mono text-xs text-[var(--signal-warn)]">
-                    [deferred] Automated delivery is offline. Use the direct email
-                    channel.
+                    [email] Your email app was opened with the message. If it did not
+                    open, use the direct email link.
                   </p>
                 ) : null}
               </div>
