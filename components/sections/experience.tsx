@@ -10,7 +10,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="history.log"
           title="Experience measured in systems improved"
-          subtitle="Product engineering, backend systems, delivery automation, and production verification across three internships."
+          subtitle="Product engineering, backend systems, delivery automation, and production verification across three roles."
         />
 
         <div className="border-border border-t">

@@ -2,7 +2,7 @@ import { ArrowDownToLine, ArrowRight, ArrowUpRight, Mail } from "lucide-react";
 import { AnimatedWrapper } from "@/components/common/animated-wrapper";
 
 const metrics = [
-  { value: "03", label: "internships" },
+  { value: "03", label: "roles" },
   { value: "08", label: "projects" },
   { value: "01", label: "CI/CD pipeline" },
 ];

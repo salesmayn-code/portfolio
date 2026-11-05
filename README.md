@@ -45,7 +45,7 @@ windows, 15-minute holds, rental checkout, deposits, inspections, disputes, and 
 
 A single-organization HR management system covering employee records, attendance, leave,
 compensation, payroll, approvals, and reporting, with role-based access and audit-ready
-workflows. Built during a software engineering internship at Netlogg.ai. The repository is
+workflows. Built at Netlogg.ai. The repository is
 private; the portfolio card summarises the delivered work.
 
 ### [Mimaar Associates CI/CD Pipeline](https://github.com/salesmayn-code/MimaarAssociates)
@@ -79,7 +79,7 @@ verification.
 
 ## Professional experience
 
-- **Software Engineering Intern, Netlogg.ai (July-October 2026):** Built HRMS Pakistan, a
+- **Software Engineer, Netlogg.ai (July-October 2026):** Built HRMS Pakistan, a
   full-stack HR management system covering employee records, attendance, leave, compensation,
   payroll, approvals, and reporting. Worked across the Next.js application, PostgreSQL/Prisma
   data model, and server-side authorization, and contributed to deployment and supporting

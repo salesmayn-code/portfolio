@@ -37,7 +37,7 @@ export const projects: Project[] = [
     id: "hrms",
     title: "HRMS Pakistan",
     description:
-      "Single-organization HR management system covering employee records, attendance, leave, compensation, payroll, approvals, and reporting, with role-based access and audit-ready workflows. Built during a software engineering internship at Netlogg.ai.",
+      "Single-organization HR management system covering employee records, attendance, leave, compensation, payroll, approvals, and reporting, with role-based access and audit-ready workflows. Built at Netlogg.ai.",
     image: "/projects/hrms.jpg",
     techStack: [
       "Next.js 16",
